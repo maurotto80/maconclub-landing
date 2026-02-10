@@ -38,10 +38,10 @@ export default function Home() {
 
     {/* CTA */}
     <a
-      href="https://wa.me/393351004423"
+      href="https://app.maconclub.com"
       className="px-5 py-2 rounded-xl bg-green-600 hover:bg-green-700 text-white font-semibold"
     >
-      Contattaci
+      Demo
     </a>
   </header>
 
