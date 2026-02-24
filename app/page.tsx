@@ -24,7 +24,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   });
 };
 
-const handleSubmit = (e: React.FormEvent) => {
+const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
 
   if (!formData.nome || !formData.cognome || !formData.email) {
@@ -32,18 +32,38 @@ const handleSubmit = (e: React.FormEvent) => {
     return;
   }
 
-  const body = `
-Nome: ${formData.nome}
-Cognome: ${formData.cognome}
-Email: ${formData.email}
-Organizzazione: ${formData.organizzazione}
-Indirizzo: ${formData.indirizzo}
-Città: ${formData.citta}
-CAP: ${formData.cap}
-Telefono: ${formData.telefono}
-  `;
+  try {
+    const res = await fetch("/api/demo", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
 
-  window.location.href = `mailto:info@maconclub.com?subject=Richiesta Demo MaconClub&body=${encodeURIComponent(body)}`;
+    const data = await res.json().catch(() => ({}));
+
+    if (!res.ok) {
+      console.error("❌ /api/demo error:", data);
+      alert(data?.error || "Errore durante l'invio. Riprova.");
+      return;
+    }
+
+    alert("✅ Richiesta inviata! Ti contatteremo a breve.");
+    setShowDemoForm(false);
+
+    setFormData({
+      nome: "",
+      cognome: "",
+      email: "",
+      organizzazione: "",
+      indirizzo: "",
+      citta: "",
+      cap: "",
+      telefono: "",
+    });
+  } catch (err) {
+    console.error("❌ fetch /api/demo failed:", err);
+    alert("Errore di rete durante l'invio. Riprova.");
+  }
 };
   return (
     <main className="bg-white text-gray-900">
