@@ -79,11 +79,7 @@ const handleSubmit = async (e: React.FormEvent) => {
 
     {/* Logo */}
     <div className="flex items-center gap-3">
-      <img
-        src="/logo.png"
-        alt="MaconClub"
-        className="w-18 h-18"
-      />
+      <img src="/logo.png" alt="MaconClub" className="w-12 h-12 sm:w-14 sm:h-14" />
       <span className="text-white font-bold text-xl">
         MaconClub
       </span>
@@ -112,30 +108,30 @@ const handleSubmit = async (e: React.FormEvent) => {
   </header>
 
   {/* HERO CONTENT */}
-  <div className="relative z-10 max-w-6xl mx-auto px-6 py-28 text-white">
-    <h1 className="text-5xl font-extrabold leading-tight">
+  <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 lg:py-28 text-white">
+  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
   L’unica piattaforma in Italia<br />
   che unisce <span className="text-blue-400">gestione sportiva</span> e
   <span className="text-green-400"> gestione amministrativa</span>
 </h1>
 
-<p className="mt-6 text-lg max-w-2xl">
+<p className="mt-6 text-base sm:text-lg max-w-2xl">
   Allenamenti, convocazioni, presenze, pagamenti, ricevute fiscali,
   libro soci, prima nota, bilanci e gestione collaboratori.
   Tutto in un unico sistema professionale.
 </p>
 
-    <div className="mt-8 flex gap-4 flex-wrap">
+    <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
       <button
   onClick={() => setShowDemoForm(true)}
-  className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 font-semibold"
+  className="w-full sm:w-auto px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 font-semibold"
 >
   Richiedi una demo gratuita
 </button>
 
       <a
         href="https://wa.me/393351004423"
-        className="px-6 py-3 rounded-xl bg-white text-black font-semibold hover:bg-gray-200"
+        className="w-full sm:w-auto px-6 py-3 rounded-xl bg-white text-black font-semibold hover:bg-gray-200 text-center"
       >
         WhatsApp: +39 335 100 4423
       </a>
@@ -145,7 +141,7 @@ const handleSubmit = async (e: React.FormEvent) => {
 
 <section className="py-20 bg-gray-50">
   <div className="max-w-6xl mx-auto px-6 text-center">
-    <h2 className="text-4xl font-bold">
+    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
       Non è solo un gestionale sportivo.
     </h2>
 
@@ -196,7 +192,7 @@ const handleSubmit = async (e: React.FormEvent) => {
         </h2>
 
         {/* Cards Container Background */}
-<div className="mt-12 bg-blue-50 rounded-3xl p-10 shadow-inner">
+<div className="mt-12 bg-blue-50 rounded-3xl p-5 sm:p-8 lg:p-10 shadow-inner">
 
   <div className="grid md:grid-cols-3 gap-6">
           {[
@@ -238,11 +234,11 @@ const handleSubmit = async (e: React.FormEvent) => {
 
         {/* APP PREVIEW IMAGE */}
 <div className="mt-16 flex justify-center">
-  <div className="bg-blue-600/90 p-8 rounded-3xl shadow-2xl">
+  <div className="bg-blue-600/90 p-4 sm:p-6 lg:p-8 rounded-3xl shadow-2xl w-full max-w-5xl">
     <img
       src="/app-preview.png"
       alt="Anteprima MaconClub"
-      className="rounded-2xl max-w-4xl w-full"
+      className="rounded-2xl w-full h-auto"
     />
   </div>
 </div>
@@ -270,17 +266,17 @@ const handleSubmit = async (e: React.FormEvent) => {
           Richiedi una demo gratuita e scopri tutte le funzionalità.
         </p>
 
-        <div className="mt-8 flex justify-center gap-4 flex-wrap">
+        <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
           <a
             href="mailto:info@maconclub.com"
-            className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold"
+            className="w-full sm:w-auto px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold"
           >
             Scrivici: info@maconclub.com
           </a>
 
           <a
             href="https://wa.me/393351004423"
-            className="px-6 py-3 rounded-xl bg-green-600 hover:bg-green-700 text-white font-semibold"
+            className="w-full sm:w-auto px-6 py-3 rounded-xl bg-green-600 hover:bg-green-700 text-white font-semibold"
           >
             WhatsApp Demo
           </a>
@@ -320,7 +316,7 @@ const handleSubmit = async (e: React.FormEvent) => {
 
       {showDemoForm && (
   <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 px-4">
-    <div className="bg-white rounded-2xl p-8 w-full max-w-xl relative">
+    <div className="bg-white rounded-2xl p-5 sm:p-8 w-full max-w-xl relative max-h-[85vh] overflow-y-auto">
 
       <button
         onClick={() => setShowDemoForm(false)}
