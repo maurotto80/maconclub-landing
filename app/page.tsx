@@ -291,7 +291,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   <div className="max-w-4xl mx-auto px-6 text-center">
 
     <div className="inline-block px-4 py-1 rounded-full bg-blue-100 text-blue-700 font-semibold text-sm mb-6">
-      Powered by <a href="https://www.maconservice.com">MaconService.com</a>
+      Powered by <a href="https://www.maconservice.com" target="_blank">MaconService.com</a>
     </div>
 
     <h2 className="text-4xl md:text-5xl font-extrabold leading-tight">
