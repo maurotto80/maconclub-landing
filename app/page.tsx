@@ -290,19 +290,18 @@ const handleSubmit = async (e: React.FormEvent) => {
       {/* ABOUT */}
       <section
   id="chi-siamo"
-  className="max-w-6xl mx-auto px-6 py-20"
+  className="max-w-6xl mx-auto px-6 py-20 text-center"
 >
+  <h2 className="text-3xl md:text-4xl font-bold">
+    MaconService: Tecnologia affidabile per lo sport italiano
+  </h2>
 
-        <h2 className="text-3xl font-bold">
-          MaconService: Tecnologia affidabile per lo sport italiano
-        </h2>
-
-        <p className="mt-6 text-gray-700 leading-relaxed max-w-3xl">
-          MaconClub è una soluzione creata da MaconService per aiutare le società sportive
-          a digitalizzare la gestione quotidiana: atleti, genitori, allenamenti, pagamenti
-          e comunicazioni in modo semplice e moderno.
-        </p>
-      </section>
+  <p className="mt-6 text-gray-700 leading-relaxed max-w-3xl mx-auto">
+    MaconClub è una soluzione creata da MaconService per aiutare le società sportive
+    a digitalizzare la gestione quotidiana: atleti, genitori, allenamenti,
+    pagamenti e comunicazioni in modo semplice e moderno.
+  </p>
+</section>
 
       {showDemoForm && (
   <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 px-4">
