@@ -1,3 +1,8 @@
+"use client";
+
+import React from "react";
+
+
 export default function Home() {
   const [showDemoForm, setShowDemoForm] = React.useState(false);
 
