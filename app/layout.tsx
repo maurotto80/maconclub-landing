@@ -13,49 +13,54 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MaconClub | Gestione completa per ASD sportive",
+  title: "Software gestionale per ASD sportive | MaconClub",
+
   description:
-    "MaconClub è la piattaforma completa per gestire la tua ASD: atleti, presenze, pagamenti, comunicazioni e documenti. Da 19€/mese. Richiedi una demo gratuita.",
+    "Software gestionale per ASD sportive: gestione atleti, allenamenti, convocazioni, pagamenti, ricevute fiscali, libro soci e prima nota. Scopri MaconClub. Da 19€/mese.",
 
   keywords: [
-    "gestione ASD",
-    "software società sportiva",
+    "software gestionale asd",
+    "gestionale società sportiva",
+    "programma gestionale asd",
+    "gestione associazione sportiva",
     "gestione atleti",
-    "pagamenti quote associative",
-    "app club sportivo",
+    "ricevute fiscali asd",
+    "libro soci digitale",
+    "prima nota asd",
     "MaconClub",
   ],
 
   authors: [{ name: "MaconService" }],
 
   openGraph: {
-  title: "MaconClub | Gestionale completo per ASD",
-  description:
-    "Sport + Amministrazione in un’unica piattaforma. Atleti, presenze, pagamenti, ricevute fiscali e libro soci da 19€/mese.",
-  url: "https://maconclub.com",
-  siteName: "MaconClub",
-  images: [
-    {
-      url: "https://maconclub.com/logo.png", // ✅ URL assoluto
-      width: 1200,
-      height: 630,
-      alt: "MaconClub – Gestionale completo per ASD",
-    },
-  ],
-  locale: "it_IT",
-  type: "website",
-},
+    title: "Software gestionale per ASD sportive | MaconClub",
+    description:
+      "Gestione sportiva e amministrativa in un’unica piattaforma: atleti, pagamenti, ricevute fiscali, libro soci e prima nota. Demo gratuita.",
+    url: "https://maconclub.com",
+    siteName: "MaconClub",
+    images: [
+      {
+        url: "https://maconclub.com/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "MaconClub – Software gestionale per ASD",
+      },
+    ],
+    locale: "it_IT",
+    type: "website",
+  },
 
   icons: {
     icon: "/favicon.ico",
   },
+
   twitter: {
-  card: "summary_large_image",
-  title: "MaconClub | Gestionale completo per ASD",
-  description:
-    "Gestione sportiva e amministrativa in un’unica piattaforma professionale.",
-  images: ["https://maconclub.com/logo.png"],
-},
+    card: "summary_large_image",
+    title: "Software gestionale per ASD sportive | MaconClub",
+    description:
+      "Gestisci la tua ASD con un unico sistema: sport + amministrazione.",
+    images: ["https://maconclub.com/logo.png"],
+  },
 };
 
 

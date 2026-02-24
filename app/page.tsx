@@ -90,6 +90,9 @@ const handleSubmit = async (e: React.FormEvent) => {
       <a href="#funzioni" className="hover:text-blue-300">
         Funzionalità
       </a>
+      <a href="/software-gestionale-asd" className="hover:text-blue-300">
+  Software ASD
+</a>
       <a href="#prezzi" className="hover:text-blue-300">
         Prezzi
       </a>
@@ -110,12 +113,13 @@ const handleSubmit = async (e: React.FormEvent) => {
   {/* HERO CONTENT */}
   <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 lg:py-28 text-white">
   <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
-  L’unica piattaforma in Italia<br />
-  che unisce <span className="text-blue-400">gestione sportiva</span> e
-  <span className="text-green-400"> gestione amministrativa</span>
+  Software gestionale per ASD sportive:<br />
+  <span className="text-blue-400">gestione sportiva</span> e
+  <span className="text-green-400"> amministrativa</span> in un’unica piattaforma
 </h1>
 
 <p className="mt-6 text-base sm:text-lg max-w-2xl">
+  Il gestionale completo per associazioni sportive dilettantistiche.
   Allenamenti, convocazioni, presenze, pagamenti, ricevute fiscali,
   libro soci, prima nota, bilanci e gestione collaboratori.
   Tutto in un unico sistema professionale.
@@ -146,11 +150,21 @@ const handleSubmit = async (e: React.FormEvent) => {
     </h2>
 
     <p className="mt-6 text-lg text-gray-700 max-w-3xl mx-auto">
-      MaconClub 2.0 integra la gestione tecnica della tua ASD con
-      la parte amministrativa e fiscale: ricevute, prima nota,
-      libro soci, verbali, collaboratori e bilanci stagionali.
-      Nessun altro software in Italia offre tutto questo in un’unica piattaforma.
-    </p>
+  MaconClub 2.0 integra la gestione tecnica della tua ASD con
+  la parte amministrativa e fiscale: ricevute, prima nota,
+  libro soci, verbali, collaboratori e bilanci stagionali.
+  Nessun altro software in Italia offre tutto questo in un’unica piattaforma.
+
+  <br /><br />
+
+  Scopri nel dettaglio il nostro{" "}
+  <a
+    href="/software-gestionale-asd"
+    className="text-blue-600 font-semibold underline hover:text-blue-800"
+  >
+    software gestionale per ASD sportive
+  </a>.
+</p>
 
     <div className="mt-12 grid md:grid-cols-2 gap-8 text-left">
       <div className="bg-white p-8 rounded-2xl shadow">
