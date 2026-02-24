@@ -412,6 +412,51 @@ const handleSubmit = async (e: React.FormEvent) => {
   </div>
 )}
 
+{/* DOWNLOAD APP */}
+<section className="bg-gray-100 py-16 px-6">
+  <div className="max-w-6xl mx-auto text-center">
+    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+      Scarica l’App MaconClub
+    </h2>
+
+    <p className="mt-3 text-gray-600">
+      Disponibile su iPhone e Android
+    </p>
+
+    <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
+      
+      {/* Apple App Store */}
+      <a
+        href="https://apps.apple.com/it/app/maconclub/id6757656386"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-full sm:w-auto"
+      >
+        <img
+          src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+          alt="Scarica su App Store"
+          className="h-14 w-auto mx-auto hover:scale-105 transition"
+        />
+      </a>
+
+      {/* Google Play */}
+      <a
+        href="https://play.google.com/store/apps/details?id=com.maconclub.maconclub&pcampaignid=web_share"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-full sm:w-auto"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+          alt="Disponibile su Google Play"
+          className="h-14 w-auto mx-auto hover:scale-105 transition"
+        />
+      </a>
+
+    </div>
+  </div>
+</section>
+
       {/* FOOTER */}
       <footer className="bg-gray-900 text-white py-10 text-center">
         <p className="font-semibold">MaconClub © {new Date().getFullYear()}</p>
