@@ -90,8 +90,13 @@ const handleSubmit = async (e: React.FormEvent) => {
       <a href="#funzioni" className="hover:text-blue-300">
         Funzionalità
       </a>
-      <a href="/software-gestionale-asd" className="hover:text-blue-300">
+     
+<a href="/software-gestionale-asd" className="hover:text-blue-300">
   Software ASD
+</a>
+
+<a href="/gestionale-societa-sportiva" className="hover:text-blue-300">
+  Gestionale Società Sportiva
 </a>
       <a href="#prezzi" className="hover:text-blue-300">
         Prezzi
@@ -157,12 +162,19 @@ const handleSubmit = async (e: React.FormEvent) => {
 
   <br /><br />
 
-  Scopri nel dettaglio il nostro{" "}
+  Approfondisci il nostro{" "}
   <a
     href="/software-gestionale-asd"
     className="text-blue-600 font-semibold underline hover:text-blue-800"
   >
     software gestionale per ASD sportive
+  </a>{" "}
+  oppure scopri il gestionale completo per{" "}
+  <a
+    href="/gestionale-societa-sportiva"
+    className="text-blue-600 font-semibold underline hover:text-blue-800"
+  >
+    società sportive
   </a>.
 </p>
 
