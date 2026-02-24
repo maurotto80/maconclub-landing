@@ -1,4 +1,45 @@
 export default function Home() {
+  const [showDemoForm, setShowDemoForm] = React.useState(false);
+
+const [formData, setFormData] = React.useState({
+  nome: "",
+  cognome: "",
+  email: "",
+  organizzazione: "",
+  indirizzo: "",
+  citta: "",
+  cap: "",
+  telefono: "",
+});
+
+const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value,
+  });
+};
+
+const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+
+  if (!formData.nome || !formData.cognome || !formData.email) {
+    alert("Compila tutti i campi obbligatori.");
+    return;
+  }
+
+  const body = `
+Nome: ${formData.nome}
+Cognome: ${formData.cognome}
+Email: ${formData.email}
+Organizzazione: ${formData.organizzazione}
+Indirizzo: ${formData.indirizzo}
+Città: ${formData.citta}
+CAP: ${formData.cap}
+Telefono: ${formData.telefono}
+  `;
+
+  window.location.href = `mailto:info@maconclub.com?subject=Richiesta Demo MaconClub&body=${encodeURIComponent(body)}`;
+};
   return (
     <main className="bg-white text-gray-900">
 
@@ -60,12 +101,12 @@ export default function Home() {
 </p>
 
     <div className="mt-8 flex gap-4 flex-wrap">
-      <a
-        href="#demo"
-        className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 font-semibold"
-      >
-        Richiedi una demo gratuita
-      </a>
+      <button
+  onClick={() => setShowDemoForm(true)}
+  className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 font-semibold"
+>
+  Richiedi una demo gratuita
+</button>
 
       <a
         href="https://wa.me/393351004423"
@@ -237,6 +278,104 @@ export default function Home() {
           e comunicazioni in modo semplice e moderno.
         </p>
       </section>
+
+      {showDemoForm && (
+  <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 px-4">
+    <div className="bg-white rounded-2xl p-8 w-full max-w-xl relative">
+
+      <button
+        onClick={() => setShowDemoForm(false)}
+        className="absolute top-4 right-4 text-gray-500 hover:text-black"
+      >
+        ✕
+      </button>
+
+      <h2 className="text-2xl font-bold mb-6 text-center">
+        Richiedi una Demo Gratuita
+      </h2>
+
+      <form onSubmit={handleSubmit} className="space-y-4">
+
+        <input
+          name="nome"
+          placeholder="Nome *"
+          value={formData.nome}
+          onChange={handleChange}
+          className="w-full border rounded-lg p-3"
+          required
+        />
+
+        <input
+          name="cognome"
+          placeholder="Cognome *"
+          value={formData.cognome}
+          onChange={handleChange}
+          className="w-full border rounded-lg p-3"
+          required
+        />
+
+        <input
+          name="email"
+          type="email"
+          placeholder="Email *"
+          value={formData.email}
+          onChange={handleChange}
+          className="w-full border rounded-lg p-3"
+          required
+        />
+
+        <input
+          name="organizzazione"
+          placeholder="Nome Organizzazione ASD"
+          value={formData.organizzazione}
+          onChange={handleChange}
+          className="w-full border rounded-lg p-3"
+        />
+
+        <input
+          name="indirizzo"
+          placeholder="Indirizzo sede"
+          value={formData.indirizzo}
+          onChange={handleChange}
+          className="w-full border rounded-lg p-3"
+        />
+
+        <div className="grid grid-cols-2 gap-4">
+          <input
+            name="citta"
+            placeholder="Città"
+            value={formData.citta}
+            onChange={handleChange}
+            className="border rounded-lg p-3"
+          />
+          <input
+            name="cap"
+            placeholder="CAP"
+            value={formData.cap}
+            onChange={handleChange}
+            className="border rounded-lg p-3"
+          />
+        </div>
+
+        <input
+          name="telefono"
+          placeholder="Telefono"
+          value={formData.telefono}
+          onChange={handleChange}
+          className="w-full border rounded-lg p-3"
+        />
+
+        <button
+          type="submit"
+          className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-xl"
+        >
+          Invia richiesta
+        </button>
+
+      </form>
+    </div>
+  </div>
+)}
 
       {/* FOOTER */}
       <footer className="bg-gray-900 text-white py-10 text-center">
