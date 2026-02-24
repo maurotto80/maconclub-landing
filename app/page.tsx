@@ -48,14 +48,16 @@ export default function Home() {
   {/* HERO CONTENT */}
   <div className="relative z-10 max-w-6xl mx-auto px-6 py-28 text-white">
     <h1 className="text-5xl font-extrabold leading-tight">
-      La piattaforma completa <br />
-      per gestire la tua ASD
-    </h1>
+  L’unica piattaforma in Italia<br />
+  che unisce <span className="text-blue-400">gestione sportiva</span> e
+  <span className="text-green-400"> gestione amministrativa</span>
+</h1>
 
-    <p className="mt-6 text-lg max-w-xl">
-      Atleti, presenze, pagamenti, comunicazioni e documenti.
-      Tutto in un’unica app.
-    </p>
+<p className="mt-6 text-lg max-w-2xl">
+  Allenamenti, convocazioni, presenze, pagamenti, ricevute fiscali,
+  libro soci, prima nota, bilanci e gestione collaboratori.
+  Tutto in un unico sistema professionale.
+</p>
 
     <div className="mt-8 flex gap-4 flex-wrap">
       <a
@@ -71,6 +73,47 @@ export default function Home() {
       >
         WhatsApp: +39 335 100 4423
       </a>
+    </div>
+  </div>
+</section>
+
+<section className="py-20 bg-gray-50">
+  <div className="max-w-6xl mx-auto px-6 text-center">
+    <h2 className="text-4xl font-bold">
+      Non è solo un gestionale sportivo.
+    </h2>
+
+    <p className="mt-6 text-lg text-gray-700 max-w-3xl mx-auto">
+      MaconClub 2.0 integra la gestione tecnica della tua ASD con
+      la parte amministrativa e fiscale: ricevute, prima nota,
+      libro soci, verbali, collaboratori e bilanci stagionali.
+      Nessun altro software in Italia offre tutto questo in un’unica piattaforma.
+    </p>
+
+    <div className="mt-12 grid md:grid-cols-2 gap-8 text-left">
+      <div className="bg-white p-8 rounded-2xl shadow">
+        <h3 className="text-xl font-bold text-blue-600">
+          ⚽ Gestione Sportiva
+        </h3>
+        <ul className="mt-4 space-y-2 text-gray-700">
+          <li>• Atleti, gruppi e allenatori</li>
+          <li>• Calendari e convocazioni</li>
+          <li>• Presenze e comunicazioni</li>
+          <li>• Pagamenti rateizzati e voucher</li>
+        </ul>
+      </div>
+
+      <div className="bg-white p-8 rounded-2xl shadow">
+        <h3 className="text-xl font-bold text-green-600">
+          📊 Gestione Amministrativa & Fiscale
+        </h3>
+        <ul className="mt-4 space-y-2 text-gray-700">
+          <li>• Prima nota automatica</li>
+          <li>• Libro soci e verbali CDA</li>
+          <li>• Ricevute fiscali con PDF</li>
+          <li>• Bilancio stagionale e annuale</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -111,10 +154,10 @@ export default function Home() {
               title: "Archiviare documenti atleta",
               desc: "Certificati, visite mediche e file sempre disponibili.",
             },
-            {
-              title: "Gestione completa ASD",
-              desc: "Un unico sistema per società sportive moderne.",
-            },
+           {
+              title: "Sport + Contabilità integrati",
+              desc: "Tecnico e amministrativo nello stesso ecosistema digitale."
+            }
           ].map((f, i) => (
             <div
               key={i}
@@ -149,8 +192,13 @@ export default function Home() {
         className="bg-blue-50 py-20 text-center px-6"
       >
         <h2 className="text-4xl font-extrabold">
-          Da <span className="text-blue-600">19€/mese</span>
-        </h2>
+  Tutta la tua ASD a partire da <span className="text-blue-600">19€/mese</span>
+</h2>
+
+<p className="mt-4 text-lg text-gray-700">
+  Nessun software separato. Nessun costo nascosto.
+  Un’unica piattaforma completa.
+</p>
 
         <p className="mt-4 text-lg text-gray-700">
           Richiedi una demo gratuita e scopri tutte le funzionalità.
