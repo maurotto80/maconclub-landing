@@ -290,17 +290,32 @@ const handleSubmit = async (e: React.FormEvent) => {
       {/* ABOUT */}
       <section
   id="chi-siamo"
-  className="max-w-6xl mx-auto px-6 py-20 text-center"
+  className="py-24 bg-gradient-to-b from-white to-blue-50"
 >
-  <h2 className="text-3xl md:text-4xl font-bold">
-    MaconService: Tecnologia affidabile per lo sport italiano
-  </h2>
+  <div className="max-w-4xl mx-auto px-6 text-center">
 
-  <p className="mt-6 text-gray-700 leading-relaxed max-w-3xl mx-auto">
-    MaconClub è una soluzione creata da MaconService per aiutare le società sportive
-    a digitalizzare la gestione quotidiana: atleti, genitori, allenamenti,
-    pagamenti e comunicazioni in modo semplice e moderno.
-  </p>
+    <div className="inline-block px-4 py-1 rounded-full bg-blue-100 text-blue-700 font-semibold text-sm mb-6">
+      Powered by MaconService
+    </div>
+
+    <h2 className="text-4xl md:text-5xl font-extrabold leading-tight">
+      Tecnologia affidabile per lo sport italiano
+    </h2>
+
+    <p className="mt-8 text-lg text-gray-700 leading-relaxed">
+      MaconClub è la piattaforma sviluppata da <strong>MaconService</strong>
+      per portare le società sportive nel futuro digitale.
+      Un ecosistema completo che unisce gestione tecnica,
+      amministrativa e fiscale in un unico sistema professionale.
+    </p>
+
+    <p className="mt-6 text-gray-600">
+      Il nostro obiettivo è semplice: eliminare fogli Excel,
+      software separati e gestione frammentata.
+      Con MaconClub hai tutto sotto controllo, in un’unica piattaforma.
+    </p>
+
+  </div>
 </section>
 
       {showDemoForm && (
