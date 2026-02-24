@@ -303,8 +303,8 @@ const handleSubmit = async (e: React.FormEvent) => {
     </h2>
 
     <p className="mt-8 text-lg text-gray-700 leading-relaxed">
-      MaconClub è la piattaforma sviluppata da <strong>MaconService</strong>
-      per portare le società sportive nel futuro digitale.
+      MaconClub è la piattaforma sviluppata da <strong>MaconService</strong> 
+       per portare le società sportive nel futuro digitale.
       Un ecosistema completo che unisce gestione tecnica,
       amministrativa e fiscale in un unico sistema professionale.
     </p>
