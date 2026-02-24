@@ -181,12 +181,12 @@ export default function SoftwareGestionaleASDClient() {
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-            <a
-              href="https://app.maconclub.com"
-              className="w-full sm:w-auto px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-center"
-            >
-              Richiedi la demo gratuita
-            </a>
+            <button
+  onClick={() => setShowDemoForm(true)}
+  className="w-full sm:w-auto px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold"
+>
+  Richiedi una demo gratuita
+</button>
           </div>
 
         </div>
