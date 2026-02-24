@@ -29,27 +29,35 @@ export const metadata: Metadata = {
   authors: [{ name: "MaconService" }],
 
   openGraph: {
-    title: "MaconClub | Gestione completa per ASD sportive",
-    description:
-      "Organizza allenamenti, gestisci pagamenti e comunica con i genitori. Tutto in un’unica app.",
-    url: "https://maconclub.com",
-    siteName: "MaconClub",
-    images: [
-  {
-    url: "/og-image.png",
-    width: 1200,
-    height: 630,
-    alt: "MaconClub | Gestione completa per ASD sportive",
-  },
-    ],
-    locale: "it_IT",
-    type: "website",
-  },
+  title: "MaconClub | Gestionale completo per ASD",
+  description:
+    "Sport + Amministrazione in un’unica piattaforma. Atleti, presenze, pagamenti, ricevute fiscali e libro soci da 19€/mese.",
+  url: "https://maconclub.com",
+  siteName: "MaconClub",
+  images: [
+    {
+      url: "https://maconclub.com/logo.png", // ✅ URL assoluto
+      width: 1200,
+      height: 630,
+      alt: "MaconClub – Gestionale completo per ASD",
+    },
+  ],
+  locale: "it_IT",
+  type: "website",
+},
 
   icons: {
     icon: "/favicon.ico",
   },
+  twitter: {
+  card: "summary_large_image",
+  title: "MaconClub | Gestionale completo per ASD",
+  description:
+    "Gestione sportiva e amministrativa in un’unica piattaforma professionale.",
+  images: ["https://maconclub.com/logo.png"],
+},
 };
+
 
 export default function RootLayout({
   children,
@@ -57,7 +65,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="it">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
