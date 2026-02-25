@@ -1,33 +1,34 @@
-//GestionaleSocietaSportivaClient.tsx
+//SoftwareContabilitaASDClient.tsx
 "use client";
 
 import React from "react";
 import DemoModal from "@/components/DemoModal";
 
-export default function GestionaleSocietaSportivaClient() {
+export default function SoftwareContabilitaASDClient() {
   const [showDemoForm, setShowDemoForm] = React.useState(false);
 
   return (
     <main className="bg-white text-gray-900">
 
-      <section className="py-20 text-center px-6 bg-gradient-to-b from-blue-50 to-white">
+      {/* HERO */}
+      <section className="py-20 text-center px-6 bg-gradient-to-b from-green-50 to-white">
         <div className="max-w-4xl mx-auto">
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold">
-            Gestionale per società sportiva
+            Software per la contabilità delle ASD
           </h1>
 
           <p className="mt-6 text-lg text-gray-700">
-            Se gestisci una società sportiva e vuoi smettere di usare Excel,
-            fogli sparsi e software separati, è il momento di passare a un
-            gestionale professionale. MaconClub unisce gestione tecnica
-            e amministrativa in un unico sistema digitale.
+            Gestire la contabilità di un’associazione sportiva dilettantistica
+            è complesso. Ricevute fiscali, libro soci, prima nota e bilanci
+            richiedono precisione e controllo. Con MaconClub hai tutto integrato
+            in un unico sistema professionale.
           </p>
 
           <div className="mt-8">
             <button
               onClick={() => setShowDemoForm(true)}
-              className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold"
+              className="px-6 py-3 rounded-xl bg-green-600 hover:bg-green-700 text-white font-semibold"
             >
               Richiedi una demo gratuita
             </button>
@@ -36,32 +37,50 @@ export default function GestionaleSocietaSportivaClient() {
         </div>
       </section>
 
+      {/* FUNZIONALITÀ CONTABILI */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
 
           <h2 className="text-3xl font-bold text-center">
-            Tutto quello che serve a una società sportiva moderna
+            Tutta la contabilità della tua ASD in un unico software
           </h2>
 
           <div className="mt-12 grid md:grid-cols-2 gap-10 text-gray-700">
 
             <div>
-              <h3 className="font-bold text-blue-600 text-xl">
-                ⚽ Gestione sportiva
+              <h3 className="font-bold text-green-600 text-xl">
+                📒 Prima nota automatica
               </h3>
               <p className="mt-4">
-                Gestione atleti, gruppi, allenatori, presenze,
-                convocazioni e comunicazioni digitali.
+                Ogni pagamento registrato aggiorna automaticamente
+                la prima nota della tua associazione.
               </p>
             </div>
 
             <div>
               <h3 className="font-bold text-green-600 text-xl">
-                📊 Gestione amministrativa
+                🧾 Ricevute fiscali digitali
               </h3>
               <p className="mt-4">
-                Pagamenti, ricevute fiscali, libro soci,
-                prima nota e bilancio integrati.
+                Genera ricevute PDF professionali in pochi secondi.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-bold text-green-600 text-xl">
+                📘 Libro soci digitale
+              </h3>
+              <p className="mt-4">
+                Gestione iscrizione, dimissioni e archivio storico soci.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-bold text-green-600 text-xl">
+                📊 Bilancio stagionale e annuale
+              </h3>
+              <p className="mt-4">
+                Controllo completo delle entrate e uscite della tua ASD.
               </p>
             </div>
 
@@ -70,22 +89,23 @@ export default function GestionaleSocietaSportivaClient() {
         </div>
       </section>
 
+      {/* CTA */}
       <section className="py-20 bg-gray-50 text-center px-6">
         <div className="max-w-3xl mx-auto">
 
           <h2 className="text-3xl font-bold">
-            Porta la tua società sportiva a un livello superiore
+            Semplifica la contabilità della tua associazione sportiva
           </h2>
 
           <p className="mt-6 text-lg text-gray-700">
-            Con MaconClub elimini la gestione frammentata e
-            centralizzi tutto in un unico gestionale.
+            Con MaconClub elimini errori manuali e sistemi separati.
+            Centralizza tutto in un unico software gestionale.
           </p>
 
           <div className="mt-8">
             <button
               onClick={() => setShowDemoForm(true)}
-              className="px-6 py-3 rounded-xl bg-green-600 hover:bg-green-700 text-white font-semibold"
+              className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold"
             >
               Prova MaconClub
             </button>
@@ -98,23 +118,31 @@ export default function GestionaleSocietaSportivaClient() {
   <div className="max-w-5xl mx-auto text-center">
 
     <h2 className="text-3xl font-bold">
-      Approfondisci le altre funzionalità
+      Approfondisci le funzionalità specifiche
     </h2>
+
+    <p className="mt-6 text-lg text-gray-700">
+      MaconClub è un software gestionale completo per associazioni sportive.
+      Scopri nel dettaglio le aree dedicate alla gestione delle società sportive
+      e alla contabilità delle ASD.
+    </p>
 
     <div className="mt-10 grid md:grid-cols-2 gap-8 text-left">
 
       <div className="bg-white p-8 rounded-2xl shadow">
         <h3 className="text-xl font-bold text-blue-600">
-          Software gestionale per ASD
+          Gestionale per società sportiva
         </h3>
         <p className="mt-4 text-gray-700">
-          Scopri la piattaforma completa che integra sport e amministrazione.
+          Approfondisci le funzionalità dedicate alla gestione di atleti,
+          allenamenti, presenze e comunicazioni digitali.
         </p>
+
         <a
-          href="/software-gestionale-asd"
+          href="/gestionale-societa-sportiva"
           className="inline-block mt-6 text-blue-600 font-semibold underline hover:text-blue-800"
         >
-          Vai al software gestionale ASD →
+          Scopri il gestionale per società sportive →
         </a>
       </div>
 
@@ -123,13 +151,15 @@ export default function GestionaleSocietaSportivaClient() {
           Software contabilità ASD
         </h3>
         <p className="mt-4 text-gray-700">
-          Approfondisci prima nota, ricevute fiscali e libro soci.
+          Prima nota, ricevute fiscali, libro soci e bilancio
+          integrati in un unico sistema professionale.
         </p>
+
         <a
           href="/software-contabilita-asd"
           className="inline-block mt-6 text-green-600 font-semibold underline hover:text-green-800"
         >
-          Vai al software contabilità →
+          Scopri il software contabilità ASD →
         </a>
       </div>
 

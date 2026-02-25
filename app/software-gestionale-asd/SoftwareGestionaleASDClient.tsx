@@ -1,3 +1,4 @@
+//SoftwareGestionaleASDClient.tsx
 "use client";
 
 import React from "react";
@@ -125,6 +126,122 @@ export default function SoftwareGestionaleASDClient() {
         </div>
       </section>
 
+      {/* CONFRONTO CON EXCEL */}
+<section className="py-20 px-6 bg-white">
+  <div className="max-w-4xl mx-auto">
+
+    <h2 className="text-3xl font-bold text-center">
+      Perché Excel non è più sufficiente per gestire una ASD
+    </h2>
+
+    <p className="mt-6 text-lg text-gray-700">
+      Molte associazioni sportive dilettantistiche utilizzano ancora Excel
+      per gestire quote, soci e pagamenti. Tuttavia, un foglio di calcolo
+      non è progettato per gestire convocazioni, presenze, ricevute fiscali
+      e bilanci in modo integrato.
+    </p>
+
+    <p className="mt-4 text-gray-700">
+      Con un software gestionale per ASD come MaconClub,
+      tutti i dati sono collegati tra loro: quando registri un pagamento,
+      puoi generare automaticamente la ricevuta fiscale e aggiornare
+      la prima nota senza inserimenti manuali.
+    </p>
+
+  </div>
+</section>
+
+{/* COME SCEGLIERE UN SOFTWARE PER ASD */}
+<section className="py-20 bg-gray-50 px-6">
+  <div className="max-w-4xl mx-auto">
+
+    <h2 className="text-3xl font-bold text-center">
+      Come scegliere il miglior software gestionale per ASD
+    </h2>
+
+    <p className="mt-6 text-lg text-gray-700">
+      Quando scegli un programma gestionale per associazione sportiva,
+      verifica che includa:
+    </p>
+
+    <ul className="mt-6 space-y-3 text-gray-700 text-lg">
+      <li>• Gestione completa degli atleti</li>
+      <li>• Calendari e convocazioni digitali</li>
+      <li>• Pagamenti rateizzati</li>
+      <li>• Ricevute fiscali in PDF</li>
+      <li>• Libro soci digitale</li>
+      <li>• Prima nota integrata</li>
+    </ul>
+
+    <p className="mt-6 text-gray-700">
+      Un vero software gestionale per ASD deve unire
+      gestione sportiva e amministrativa. Separare i sistemi
+      significa aumentare errori e perdita di tempo.
+    </p>
+
+  </div>
+</section>
+
+{/* ERRORI COMUNI NELLA GESTIONE ASD */}
+<section className="py-20 px-6 bg-white">
+  <div className="max-w-4xl mx-auto">
+
+    <h2 className="text-3xl font-bold text-center">
+      Errori comuni nella gestione delle associazioni sportive
+    </h2>
+
+    <p className="mt-6 text-lg text-gray-700">
+      Molte ASD commettono errori organizzativi che possono
+      compromettere la gestione amministrativa:
+    </p>
+
+    <ul className="mt-6 space-y-3 text-gray-700 text-lg">
+      <li>• Ricevute non collegate ai pagamenti</li>
+      <li>• Libro soci non aggiornato</li>
+      <li>• Prima nota incompleta</li>
+      <li>• Dati sparsi su più software</li>
+      <li>• Comunicazioni non tracciate</li>
+    </ul>
+
+    <p className="mt-6 text-gray-700">
+      Utilizzare un software gestionale per ASD professionale
+      permette di centralizzare tutto e ridurre drasticamente
+      questi problemi.
+    </p>
+
+  </div>
+</section>
+{/* NORMATIVA E OBBLIGHI FISCALI */}
+<section className="py-20 bg-gray-50 px-6">
+  <div className="max-w-4xl mx-auto">
+
+    <h2 className="text-3xl font-bold text-center">
+      Normativa e obblighi fiscali per le ASD
+    </h2>
+
+    <p className="mt-6 text-lg text-gray-700">
+      Le associazioni sportive dilettantistiche devono rispettare
+      obblighi amministrativi e fiscali precisi. Tra questi:
+    </p>
+
+    <ul className="mt-6 space-y-3 text-gray-700 text-lg">
+      <li>• Tenuta aggiornata del libro soci</li>
+      <li>• Tracciabilità delle entrate e uscite</li>
+      <li>• Emissione corretta delle ricevute fiscali</li>
+      <li>• Rendiconto annuale e bilancio stagionale</li>
+      <li>• Corretta archiviazione dei documenti</li>
+    </ul>
+
+    <p className="mt-6 text-gray-700">
+      Un software gestionale per ASD come MaconClub
+      facilita il rispetto di questi obblighi,
+      riducendo il rischio di errori amministrativi
+      e migliorando la trasparenza della gestione.
+    </p>
+
+  </div>
+</section>
+
       {/* FAQ SEO */}
       <section className="py-20 bg-blue-50 px-6">
         <div className="max-w-4xl mx-auto">
@@ -191,6 +308,59 @@ export default function SoftwareGestionaleASDClient() {
 
         </div>
       </section>
+      {/* APPROFONDIMENTI SEO */}
+<section className="py-20 bg-gray-50 px-6">
+  <div className="max-w-5xl mx-auto text-center">
+
+    <h2 className="text-3xl font-bold">
+      Approfondisci le funzionalità specifiche
+    </h2>
+
+    <p className="mt-6 text-lg text-gray-700">
+      MaconClub è un software gestionale completo per associazioni sportive.
+      Scopri nel dettaglio le aree dedicate alla gestione delle società sportive
+      e alla contabilità delle ASD.
+    </p>
+
+    <div className="mt-10 grid md:grid-cols-2 gap-8 text-left">
+
+      <div className="bg-white p-8 rounded-2xl shadow">
+        <h3 className="text-xl font-bold text-blue-600">
+          Gestionale per società sportiva
+        </h3>
+        <p className="mt-4 text-gray-700">
+          Approfondisci le funzionalità dedicate alla gestione di atleti,
+          allenamenti, presenze e comunicazioni digitali.
+        </p>
+
+        <a
+          href="/gestionale-societa-sportiva"
+          className="inline-block mt-6 text-blue-600 font-semibold underline hover:text-blue-800"
+        >
+          Scopri il gestionale per società sportive →
+        </a>
+      </div>
+
+      <div className="bg-white p-8 rounded-2xl shadow">
+        <h3 className="text-xl font-bold text-green-600">
+          Software contabilità ASD
+        </h3>
+        <p className="mt-4 text-gray-700">
+          Prima nota, ricevute fiscali, libro soci e bilancio
+          integrati in un unico sistema professionale.
+        </p>
+
+        <a
+          href="/software-contabilita-asd"
+          className="inline-block mt-6 text-green-600 font-semibold underline hover:text-green-800"
+        >
+          Scopri il software contabilità ASD →
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
       {/* MODALE DEMO */}
       <DemoModal
         open={showDemoForm}
