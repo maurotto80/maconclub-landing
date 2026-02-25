@@ -1,4 +1,3 @@
-//GestionaleSocietaSportivaClient.tsx
 "use client";
 
 import React from "react";
@@ -10,6 +9,7 @@ export default function GestionaleSocietaSportivaClient() {
   return (
     <main className="bg-white text-gray-900">
 
+      {/* HERO */}
       <section className="py-20 text-center px-6 bg-gradient-to-b from-blue-50 to-white">
         <div className="max-w-4xl mx-auto">
 
@@ -18,10 +18,9 @@ export default function GestionaleSocietaSportivaClient() {
           </h1>
 
           <p className="mt-6 text-lg text-gray-700">
-            Se gestisci una società sportiva e vuoi smettere di usare Excel,
-            fogli sparsi e software separati, è il momento di passare a un
-            gestionale professionale. MaconClub unisce gestione tecnica
-            e amministrativa in un unico sistema digitale.
+            Un gestionale professionale per società sportive
+            che vogliono organizzare atleti, staff tecnico,
+            allenamenti, presenze e comunicazioni in modo digitale.
           </p>
 
           <div className="mt-8">
@@ -36,51 +35,116 @@ export default function GestionaleSocietaSportivaClient() {
         </div>
       </section>
 
+      {/* GESTIONE ATLETI */}
       <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
 
           <h2 className="text-3xl font-bold text-center">
-            Tutto quello che serve a una società sportiva moderna
+            Gestione completa di atleti e categorie
           </h2>
 
-          <div className="mt-12 grid md:grid-cols-2 gap-10 text-gray-700">
-
-            <div>
-              <h3 className="font-bold text-blue-600 text-xl">
-                ⚽ Gestione sportiva
-              </h3>
-              <p className="mt-4">
-                Gestione atleti, gruppi, allenatori, presenze,
-                convocazioni e comunicazioni digitali.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-bold text-green-600 text-xl">
-                📊 Gestione amministrativa
-              </h3>
-              <p className="mt-4">
-                Pagamenti, ricevute fiscali, libro soci,
-                prima nota e bilancio integrati.
-              </p>
-            </div>
-
-          </div>
+          <p className="mt-6 text-lg text-gray-700">
+            Organizza atleti per categoria, squadra o gruppo.
+            Monitora stato documenti, certificati medici,
+            presenze agli allenamenti e partecipazione alle gare.
+          </p>
 
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50 text-center px-6">
-        <div className="max-w-3xl mx-auto">
+      {/* ISCRIZIONI */}
+      <section className="py-20 bg-gray-50 px-6">
+        <div className="max-w-4xl mx-auto">
 
-          <h2 className="text-3xl font-bold">
-            Porta la tua società sportiva a un livello superiore
+          <h2 className="text-3xl font-bold text-center">
+            Gestione iscrizioni e tesseramenti digitali
           </h2>
 
           <p className="mt-6 text-lg text-gray-700">
-            Con MaconClub elimini la gestione frammentata e
-            centralizzi tutto in un unico gestionale.
+            Centralizza iscrizioni, documentazione e stato tesseramento.
+            Riduci errori manuali e tieni tutto aggiornato in tempo reale.
           </p>
+
+        </div>
+      </section>
+
+      {/* STAFF */}
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
+
+          <h2 className="text-3xl font-bold text-center">
+            Gestione allenatori e staff tecnico
+          </h2>
+
+          <p className="mt-6 text-lg text-gray-700">
+            Assegna ruoli e permessi, monitora attività e
+            coordina allenatori, preparatori e collaboratori
+            all’interno di un unico sistema.
+          </p>
+
+        </div>
+      </section>
+
+      {/* CALENDARIO */}
+      <section className="py-20 bg-gray-50 px-6">
+        <div className="max-w-4xl mx-auto">
+
+          <h2 className="text-3xl font-bold text-center">
+            Calendari allenamenti e partite
+          </h2>
+
+          <p className="mt-6 text-lg text-gray-700">
+            Gestisci calendario allenamenti, partite,
+            convocazioni e presenze in modo semplice.
+            Tutti i membri ricevono notifiche in tempo reale.
+          </p>
+
+        </div>
+      </section>
+
+      {/* AREA GENITORI */}
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
+
+          <h2 className="text-3xl font-bold text-center">
+            Area genitori e comunicazioni integrate
+          </h2>
+
+          <p className="mt-6 text-lg text-gray-700">
+            Comunica con genitori e atleti tramite notifiche push,
+            convocazioni digitali e messaggi centralizzati.
+            Niente più gruppi WhatsApp disordinati.
+          </p>
+
+        </div>
+      </section>
+
+      {/* VANTAGGI */}
+      <section className="py-20 bg-gray-50 px-6">
+        <div className="max-w-4xl mx-auto">
+
+          <h2 className="text-3xl font-bold text-center">
+            Perché scegliere un gestionale per società sportiva
+          </h2>
+
+          <ul className="mt-8 space-y-3 text-lg text-gray-700">
+            <li>• Organizzazione centralizzata</li>
+            <li>• Riduzione errori manuali</li>
+            <li>• Maggiore trasparenza gestionale</li>
+            <li>• Comunicazioni più rapide</li>
+            <li>• Gestione professionale del club</li>
+          </ul>
+
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 text-center px-6">
+        <div className="max-w-3xl mx-auto">
+
+          <h2 className="text-3xl font-extrabold">
+            Porta la tua società sportiva a un livello superiore
+          </h2>
 
           <div className="mt-8">
             <button
@@ -93,49 +157,44 @@ export default function GestionaleSocietaSportivaClient() {
 
         </div>
       </section>
-      {/* APPROFONDIMENTI SEO */}
-<section className="py-20 bg-gray-50 px-6">
-  <div className="max-w-5xl mx-auto text-center">
 
-    <h2 className="text-3xl font-bold">
-      Approfondisci le altre funzionalità
-    </h2>
+      {/* LINKING SEO */}
+      <section className="py-20 bg-gray-50 px-6">
+        <div className="max-w-5xl mx-auto text-center">
 
-    <div className="mt-10 grid md:grid-cols-2 gap-8 text-left">
+          <h2 className="text-3xl font-bold">
+            Scopri anche le altre funzionalità
+          </h2>
 
-      <div className="bg-white p-8 rounded-2xl shadow">
-        <h3 className="text-xl font-bold text-blue-600">
-          Software gestionale per ASD
-        </h3>
-        <p className="mt-4 text-gray-700">
-          Scopri la piattaforma completa che integra sport e amministrazione.
-        </p>
-        <a
-          href="/software-gestionale-asd"
-          className="inline-block mt-6 text-blue-600 font-semibold underline hover:text-blue-800"
-        >
-          Vai al software gestionale ASD →
-        </a>
-      </div>
+          <div className="mt-10 grid md:grid-cols-2 gap-8 text-left">
 
-      <div className="bg-white p-8 rounded-2xl shadow">
-        <h3 className="text-xl font-bold text-green-600">
-          Software contabilità ASD
-        </h3>
-        <p className="mt-4 text-gray-700">
-          Approfondisci prima nota, ricevute fiscali e libro soci.
-        </p>
-        <a
-          href="/software-contabilita-asd"
-          className="inline-block mt-6 text-green-600 font-semibold underline hover:text-green-800"
-        >
-          Vai al software contabilità →
-        </a>
-      </div>
+            <div className="bg-white p-8 rounded-2xl shadow">
+              <h3 className="text-xl font-bold text-blue-600">
+                Software gestionale per ASD
+              </h3>
+              <a
+                href="/software-gestionale-asd"
+                className="inline-block mt-6 text-blue-600 font-semibold underline"
+              >
+                Vai al gestionale completo →
+              </a>
+            </div>
 
-    </div>
-  </div>
-</section>
+            <div className="bg-white p-8 rounded-2xl shadow">
+              <h3 className="text-xl font-bold text-green-600">
+                Software contabilità ASD
+              </h3>
+              <a
+                href="/software-contabilita-asd"
+                className="inline-block mt-6 text-green-600 font-semibold underline"
+              >
+                Vai al software contabilità →
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
 
       <DemoModal
         open={showDemoForm}

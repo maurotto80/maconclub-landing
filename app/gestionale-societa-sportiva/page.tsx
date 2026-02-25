@@ -2,9 +2,22 @@ import type { Metadata } from "next";
 import GestionaleSocietaSportivaClient from "./GestionaleSocietaSportivaClient";
 
 export const metadata: Metadata = {
-  title: "Gestionale per società sportiva | MaconClub",
+  title:
+    "Gestionale per società sportiva | Gestione atleti, staff e calendario | MaconClub",
+
   description:
-    "Gestionale completo per società sportive: atleti, pagamenti, ricevute fiscali, libro soci e prima nota in un’unica piattaforma. Scopri MaconClub.",
+    "Gestionale per società sportiva per organizzare atleti, categorie, staff tecnico, allenamenti e comunicazioni. Semplifica la gestione del tuo club con MaconClub.",
+
+  openGraph: {
+    title:
+      "Gestionale per società sportiva | MaconClub",
+    description:
+      "Organizza atleti, staff e calendario con un gestionale professionale per società sportive.",
+    url: "https://maconclub.com/gestionale-societa-sportiva",
+    siteName: "MaconClub",
+    type: "website",
+  },
+
   alternates: {
     canonical: "https://maconclub.com/gestionale-societa-sportiva",
   },

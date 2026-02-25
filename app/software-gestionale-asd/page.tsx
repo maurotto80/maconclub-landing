@@ -4,7 +4,7 @@ import SoftwareGestionaleASDClient from "./SoftwareGestionaleASDClient";
 export const metadata: Metadata = {
   title: "Software gestionale per ASD sportive | Gestione atleti, pagamenti e contabilità | MaconClub",
   description:
-    "Software gestionale per associazioni sportive dilettantistiche. Gestione atleti, pagamenti, ricevute fiscali, libro soci e prima nota in un’unica piattaforma. Scopri MaconClub.",
+  "Software gestionale per ASD sportive che unisce gestione atleti, pagamenti, ricevute fiscali, libro soci e prima nota in un’unica piattaforma professionale. Da 19€/mese. Richiedi una demo gratuita.",
   keywords: [
     "software gestionale asd",
     "programma per asd",
@@ -14,13 +14,13 @@ export const metadata: Metadata = {
     "libro soci digitale",
   ],
   openGraph: {
-    title: "Software gestionale per ASD sportive | MaconClub",
-    description:
-      "Il gestionale completo per ASD: sport + amministrazione integrati. Demo gratuita.",
-    url: "https://maconclub.com/software-gestionale-asd",
-    siteName: "MaconClub",
-    type: "article",
-  },
+  title: "Software gestionale per ASD sportive | MaconClub",
+  description:
+    "Gestionale completo per ASD: gestione atleti, pagamenti e contabilità integrati.",
+  url: "https://maconclub.com/software-gestionale-asd",
+  siteName: "MaconClub",
+  type: "website",
+},
   alternates: {
     canonical: "https://maconclub.com/software-gestionale-asd",
   },
