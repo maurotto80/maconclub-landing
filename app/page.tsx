@@ -3,6 +3,7 @@
 import React from "react";
 
 
+
 export default function Home() {
   const [showDemoForm, setShowDemoForm] = React.useState(false);
 
@@ -66,7 +67,9 @@ const handleSubmit = async (e: React.FormEvent) => {
   }
 };
   return (
-    <main className="bg-white text-gray-900">
+  <main className="bg-white text-gray-900">
+
+  
 
       {/* HERO */}
 <section className="relative bg-[url('/hero.jpg')] bg-cover bg-center min-h-[90vh]">
@@ -74,47 +77,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   {/* Overlay */}
   <div className="absolute inset-0 bg-black/60" />
 
-  {/* NAVBAR */}
-  <header className="relative z-10 max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
-
-    {/* Logo */}
-    <div className="flex items-center gap-3">
-      <img src="/logo.png" alt="MaconClub" className="w-12 h-12 sm:w-14 sm:h-14" />
-      <span className="text-white font-bold text-xl">
-        MaconClub
-      </span>
-    </div>
-
-    {/* Menu */}
-    <nav className="hidden md:flex gap-8 text-white font-medium">
-      <a href="#funzioni" className="hover:text-blue-300">
-        Funzionalità
-      </a>
-     
-<a href="/software-gestionale-asd" className="hover:text-blue-300">
-  Software ASD
-</a>
-
-<a href="/gestionale-societa-sportiva" className="hover:text-blue-300">
-  Gestionale Società Sportiva
-</a>
-      <a href="#prezzi" className="hover:text-blue-300">
-        Prezzi
-      </a>
-      <a href="#chi-siamo" className="hover:text-blue-300">
-        Chi siamo
-      </a>
-    </nav>
-
-    {/* CTA */}
-    <a
-      href="https://app.maconclub.com"
-      className="px-5 py-2 rounded-xl bg-green-600 hover:bg-green-700 text-white font-semibold"
-    >
-      Demo
-    </a>
-  </header>
-
+  
   {/* HERO CONTENT */}
   <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 lg:py-28 text-white">
   <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">

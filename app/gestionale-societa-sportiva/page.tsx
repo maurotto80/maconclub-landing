@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import GestionaleSocietaSportivaClient from "./GestionaleSocietaSportivaClient";
 
+
 export const metadata: Metadata = {
   title: "Gestionale per società sportiva | MaconClub",
 
