@@ -45,12 +45,7 @@ export default function Navbar() {
     Prezzi
   </Link>
 
-  <a
-    href="#"
-    className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-  >
-    Demo gratuita
-  </a>
+  
 </nav>
 
         {/* Hamburger Button */}
