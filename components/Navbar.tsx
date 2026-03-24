@@ -19,25 +19,39 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex gap-8 font-medium text-gray-700">
-          <Link href="/" className="hover:text-blue-600">
-            Home
-          </Link>
+        <nav className="hidden md:flex items-center gap-8 font-medium text-gray-700">
+  <Link href="/" className="hover:text-blue-600">
+    Home
+  </Link>
 
-          <Link
-            href="/gestionale-societa-sportiva"
-            className="hover:text-blue-600"
-          >
-            Gestionale Società Sportiva
-          </Link>
+  <Link
+    href="/gestionale-societa-sportiva"
+    className="hover:text-blue-600"
+  >
+    Gestionale Società Sportiva
+  </Link>
 
-          <Link
-            href="/software-gestionale-asd"
-            className="hover:text-blue-600"
-          >
-            Software Gestionale ASD
-          </Link>
-        </nav>
+  <Link
+    href="/software-gestionale-asd"
+    className="hover:text-blue-600"
+  >
+    Software Gestionale ASD
+  </Link>
+
+  <Link
+    href="/prezzi"
+    className="hover:text-blue-600"
+  >
+    Prezzi
+  </Link>
+
+  <a
+    href="#"
+    className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+  >
+    Demo gratuita
+  </a>
+</nav>
 
         {/* Hamburger Button */}
         <button
@@ -69,6 +83,12 @@ export default function Navbar() {
             >
               Software Gestionale ASD
             </Link>
+            <Link
+  href="/prezzi"
+  onClick={() => setOpen(false)}
+>
+  Prezzi
+</Link>
           </div>
         </div>
       )}
