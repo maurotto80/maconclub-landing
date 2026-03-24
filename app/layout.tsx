@@ -1,3 +1,5 @@
+//app/layout.tsx
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/components/Navbar";
@@ -17,21 +19,27 @@ export const metadata: Metadata = {
   title: "Software gestionale per ASD sportive | MaconClub",
 
   description:
-    "Software gestionale per ASD sportive: gestione atleti, allenamenti, convocazioni, pagamenti, ricevute fiscali, libro soci e prima nota. Scopri MaconClub. Da 19€/mese.",
+    "Software gestionale per ASD sportive: gestione atleti, allenamenti, convocazioni, pagamenti, ricevute fiscali, libro soci, collaboratori e prima nota. Scopri MaconClub. Da 19€/mese.",
 
   keywords: [
     "software gestionale asd",
     "gestionale società sportiva",
     "programma gestionale asd",
     "gestione associazione sportiva",
+    "gestionale sportivo",
     "gestione atleti",
     "ricevute fiscali asd",
     "libro soci digitale",
     "prima nota asd",
+    "software associazioni sportive",
     "MaconClub",
   ],
 
   authors: [{ name: "MaconService" }],
+
+  alternates: {
+    canonical: "https://maconclub.com",
+  },
 
   openGraph: {
     title: "Software gestionale per ASD sportive | MaconClub",
@@ -39,14 +47,14 @@ export const metadata: Metadata = {
       "Gestione sportiva e amministrativa in un’unica piattaforma: atleti, pagamenti, ricevute fiscali, libro soci e prima nota. Demo gratuita.",
     url: "https://maconclub.com",
     siteName: "MaconClub",
-    images: [
-      {
-        url: "https://maconclub.com/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "MaconClub – Software gestionale per ASD",
-      },
-    ],
+      images: [
+  {
+    url: "https://maconclub.com/og-maconclub.jpg",
+    width: 1200,
+    height: 630,
+    alt: "MaconClub – Software gestionale per ASD",
+  },
+],
     locale: "it_IT",
     type: "website",
   },
@@ -87,6 +95,33 @@ export default function RootLayout({
             gtag('config', 'G-LG7NZFJ879');
           `}
         </Script>
+        {/* SEO Schema.org */}
+<Script
+  id="schema-software"
+  type="application/ld+json"
+  strategy="afterInteractive"
+>
+  {JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "MaconClub",
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Web, iOS, Android",
+    description:
+      "Software gestionale per ASD sportive che integra gestione sportiva e amministrativa: atleti, allenamenti, presenze, pagamenti, ricevute fiscali, libro soci e prima nota.",
+    offers: {
+      "@type": "Offer",
+      price: "19",
+      priceCurrency: "EUR",
+    },
+    url: "https://maconclub.com",
+    publisher: {
+      "@type": "Organization",
+      name: "MaconService",
+      url: "https://www.maconservice.com",
+    },
+  })}
+</Script>
 
         <Navbar />
         {children}

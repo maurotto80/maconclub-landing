@@ -1,3 +1,5 @@
+//app/page.tsx
+
 "use client";
 
 import React from "react";
@@ -239,16 +241,33 @@ const handleSubmit = async (e: React.FormEvent) => {
 </section>
 
       {/* PRICING */}
-      <section id="prezzi"
-        className="bg-blue-50 py-20 text-center px-6"
-      >
-        <h2 className="text-4xl font-extrabold">
-  Tutta la tua ASD a partire da <span className="text-blue-600">19€/mese</span>
+<section
+ id="prezzi"
+ className="bg-blue-50 py-20 text-center px-6"
+>
+
+<h2 className="text-3xl sm:text-4xl font-extrabold">
+  Tutta la tua ASD da <span className="text-blue-600">19€/mese</span>
 </h2>
 
 <p className="mt-4 text-lg text-gray-700">
-  Nessun software separato. Nessun costo nascosto.
-  Un’unica piattaforma completa.
+  Un'unica piattaforma per gestione sportiva e amministrativa.
+</p>
+
+<a
+ href="/prezzi"
+ className="inline-block mt-8 px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-lg"
+>
+ Scopri i piani e prezzi
+</a>
+<p className="mt-4 text-sm text-gray-500">
+  Piani a partire da 19€/mese • Nessun costo di installazione
+</p>
+
+<p className="mt-4 text-lg text-gray-700">
+  MaconClub è il software gestionale per ASD sportive
+  con prezzi accessibili: gestione atleti, allenamenti,
+  pagamenti, ricevute fiscali e contabilità in un unico sistema.
 </p>
 
         <p className="mt-4 text-lg text-gray-700">
