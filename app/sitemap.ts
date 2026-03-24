@@ -11,6 +11,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: `${baseUrl}/prezzi`,
+      lastModified: new Date("2026-03-24"),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/software-gestionale-asd`,
       lastModified: new Date("2026-02-25"),
       changeFrequency: "weekly",
