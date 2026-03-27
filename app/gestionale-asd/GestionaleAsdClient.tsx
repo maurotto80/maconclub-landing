@@ -1,3 +1,5 @@
+//app/gestionale-asd/GestionaleAsdClient.tsx
+
 "use client";
 
 import React from "react";
@@ -21,7 +23,8 @@ Gestionale per ASD: come gestire una associazione sportiva in modo digitale
 Gestire una associazione sportiva dilettantistica può
 diventare complesso quando atleti, pagamenti,
 allenamenti e documenti vengono gestiti con fogli Excel
-o sistemi separati.
+o con sistemi separati invece che con un
+<strong>software gestionale per ASD</strong>.
 
 Un <strong>gestionale per ASD</strong> come MaconClub permette
 di centralizzare tutte le attività della società sportiva
@@ -174,6 +177,45 @@ calendari, pagamenti, ricevute fiscali e contabilità.
       <li>• Accademie sportive</li>
       <li>• Società sportive dilettantistiche</li>
     </ul>
+
+  </div>
+</section>
+
+{/* FAQ GESTIONALE ASD */}
+<section className="py-20 px-6 bg-white">
+  <div className="max-w-4xl mx-auto">
+
+    <h2 className="text-3xl font-bold text-center">
+      Domande frequenti sui gestionali per ASD
+    </h2>
+
+    <div className="mt-10 space-y-6 text-gray-700">
+
+      <div>
+        <h3 className="font-bold">
+          Quanto costa un gestionale per ASD?
+        </h3>
+        <p>
+          Il costo di un gestionale per associazioni sportive
+          dipende dalle funzionalità offerte. I software più
+          completi permettono di gestire atleti, allenamenti,
+          pagamenti e contabilità in un’unica piattaforma.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="font-bold">
+          Perché usare un gestionale per associazioni sportive?
+        </h3>
+        <p>
+          Un gestionale sportivo permette di centralizzare
+          tutte le attività della società sportiva,
+          riducendo errori manuali e migliorando
+          l’organizzazione del club.
+        </p>
+      </div>
+
+    </div>
 
   </div>
 </section>

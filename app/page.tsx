@@ -65,19 +65,26 @@ Non è solo un gestionale sportivo per ASD
   <br /><br />
 
   Approfondisci il nostro{" "}
-  <a
-    href="/software-gestionale-asd"
-    className="text-blue-600 font-semibold underline hover:text-blue-800"
-  >
-    software gestionale per ASD sportive
-  </a>{" "}
-  oppure scopri il gestionale completo per{" "}
-  <a
-    href="/gestionale-societa-sportiva"
-    className="text-blue-600 font-semibold underline hover:text-blue-800"
-  >
-    società sportive
-  </a>.
+<a
+  href="/software-gestionale-asd"
+  className="text-blue-600 font-semibold underline hover:text-blue-800"
+>
+  software gestionale per ASD sportive
+</a>{" "}
+oppure scopri il gestionale completo per{" "}
+<a
+  href="/gestionale-societa-sportiva"
+  className="text-blue-600 font-semibold underline hover:text-blue-800"
+>
+  società sportive
+</a>{" "}
+o il nostro{" "}
+<a
+  href="/programma-gestione-associazione-sportiva"
+  className="text-blue-600 font-semibold underline hover:text-blue-800"
+>
+  programma per la gestione di una associazione sportiva
+</a>.
 </p>
 
     <div className="mt-12 grid md:grid-cols-2 gap-8 text-left">

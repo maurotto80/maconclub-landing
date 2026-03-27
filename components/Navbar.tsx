@@ -39,18 +39,25 @@ export default function Navbar() {
   </Link>
 
   <Link
-    href="/software-gestionale-asd"
-    className="hover:text-blue-600"
-  >
-    Software Gestionale ASD
-  </Link>
+  href="/software-gestionale-asd"
+  className="hover:text-blue-600"
+>
+  Software Gestionale ASD
+</Link>
 
-  <Link
-    href="/prezzi"
-    className="hover:text-blue-600"
-  >
-    Prezzi
-  </Link>
+<Link
+  href="/programma-gestione-associazione-sportiva"
+  className="hover:text-blue-600"
+>
+  Programma ASD
+</Link>
+
+<Link
+  href="/prezzi"
+  className="hover:text-blue-600"
+>
+  Prezzi
+</Link>
 </nav>
 
         {/* Hamburger Button */}
@@ -89,6 +96,13 @@ export default function Navbar() {
   onClick={() => setOpen(false)}
 >
   Software Gestionale ASD
+</Link>
+
+<Link
+  href="/programma-gestione-associazione-sportiva"
+  onClick={() => setOpen(false)}
+>
+  Programma ASD
 </Link>
           </div>
         </div>

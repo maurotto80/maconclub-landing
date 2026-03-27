@@ -70,11 +70,11 @@ senza fogli Excel o sistemi separati.
         <div className="max-w-4xl mx-auto">
 
           <h2 className="text-3xl font-bold text-center">
-            Gestione completa di atleti e categorie
+            Organizzazione di squadre e staff tecnico
           </h2>
 
           <p className="mt-6 text-lg text-gray-700">
-            Organizza atleti per categoria, squadra o gruppo.
+            Organizza squadre, categorie e staff tecnico.
             Monitora stato documenti, certificati medici,
             presenze agli allenamenti e partecipazione alle gare.
           </p>

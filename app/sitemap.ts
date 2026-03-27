@@ -35,10 +35,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-  url: `${baseUrl}/gestionale-asd`,
-  lastModified: new Date(),
-  changeFrequency: "weekly",
-  priority: 0.9,
-}
+      url: `${baseUrl}/gestionale-asd`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/programma-gestione-associazione-sportiva`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
   ];
 }

@@ -1,4 +1,4 @@
-//SoftwareGestionaleASDClient.tsx
+//app/software-gestionale-asd/SoftwareGestionaleASDClient.tsx
 "use client";
 
 import React from "react";
@@ -16,8 +16,13 @@ export default function SoftwareGestionaleASDClient() {
         <div className="max-w-4xl mx-auto">
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
-Software gestionale per ASD e società sportive
+Software gestionale per ASD e società sportive: piattaforma completa per la gestione sportiva
 </h1>
+
+<p className="mt-4 text-sm text-gray-500">
+Software gestionale cloud per associazioni sportive dilettantistiche
+e società sportive.
+</p>
 
           <p className="mt-6 text-lg text-gray-700">
             Se gestisci un’associazione sportiva dilettantistica e stai ancora
@@ -35,7 +40,9 @@ Software gestionale per ASD e società sportive
 </button>
 
             <a
-              href="https://wa.me/393351004423"
+  href="https://wa.me/393351004423"
+  target="_blank"
+  rel="noopener noreferrer"
               className="w-full sm:w-auto px-6 py-3 rounded-xl bg-green-600 hover:bg-green-700 text-white font-semibold text-center"
             >
               Parla con noi su WhatsApp
@@ -133,6 +140,25 @@ Software gestionale per ASD e società sportive
     <h2 className="text-3xl font-bold text-center">
       Perché Excel non è più sufficiente per gestire una ASD
     </h2>
+
+    {/* BENEFICI SOFTWARE ASD */}
+<section className="py-20 px-6 bg-gray-50">
+  <div className="max-w-4xl mx-auto">
+
+    <h2 className="text-3xl font-bold text-center">
+      I vantaggi di un software gestionale per ASD
+    </h2>
+
+    <ul className="mt-10 space-y-4 text-lg text-gray-700">
+      <li>• Riduzione del tempo di gestione amministrativa</li>
+      <li>• Controllo completo di atleti e pagamenti</li>
+      <li>• Eliminazione dei fogli Excel e dei dati duplicati</li>
+      <li>• Comunicazioni rapide con allenatori e genitori</li>
+      <li>• Gestione contabile integrata per le associazioni sportive</li>
+    </ul>
+
+  </div>
+</section>
 
     <p className="mt-6 text-lg text-gray-700">
       Molte associazioni sportive dilettantistiche utilizzano ancora Excel
