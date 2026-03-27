@@ -2,6 +2,12 @@
 
 import DemoForm from "@/components/DemoForm";
 
+export const metadata = {
+  title: "Software gestionale per ASD e società sportive | MaconClub",
+  description:
+    "Gestionale per ASD e società sportive: gestione atleti, allenamenti, pagamenti, ricevute fiscali e contabilità in un unico software.",
+};
+
 export default function Home() {
   return (
   <main className="bg-white text-gray-900">
@@ -18,16 +24,17 @@ export default function Home() {
   {/* HERO CONTENT */}
   <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 lg:py-28 text-white">
   <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
-  Software gestionale per ASD sportive:<br />
-  <span className="text-blue-400">gestione sportiva</span> e
-  <span className="text-green-400"> amministrativa</span> in un’unica piattaforma
+Software gestionale per <strong>ASD e società sportive</strong>:<br />
+<span className="text-blue-400">gestione sportiva</span> e
+<span className="text-green-400"> amministrativa</span> in un’unica piattaforma
 </h1>
 
 <p className="mt-6 text-base sm:text-lg max-w-2xl">
-  Il gestionale completo per associazioni sportive dilettantistiche.
-  Allenamenti, convocazioni, presenze, pagamenti, ricevute fiscali,
-  libro soci, prima nota, bilanci e gestione collaboratori.
-  Tutto in un unico sistema professionale.
+MaconClub è un <strong>software gestionale per ASD e società sportive</strong>
+che permette di gestire atleti, allenamenti, presenze, pagamenti,
+ricevute fiscali, libro soci e contabilità in un’unica piattaforma digitale.
+Un gestionale sportivo completo progettato per associazioni sportive
+dilettantistiche che vogliono organizzare al meglio la propria attività.
 </p>
 
     <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
@@ -46,8 +53,8 @@ export default function Home() {
 <section className="py-20 bg-gray-50">
   <div className="max-w-6xl mx-auto px-6 text-center">
     <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
-      Non è solo un gestionale sportivo.
-    </h2>
+Non è solo un gestionale sportivo per ASD
+</h2>
 
     <p className="mt-6 text-lg text-gray-700 max-w-3xl mx-auto">
   MaconClub 2.0 integra la gestione tecnica della tua ASD con
@@ -195,7 +202,7 @@ export default function Home() {
 </p>
 
 <p className="mt-4 text-lg text-gray-700">
-  MaconClub è il software gestionale per ASD sportive
+  MaconClub è un software gestionale per ASD e società sportive
   con prezzi accessibili: gestione atleti, allenamenti,
   pagamenti, ricevute fiscali e contabilità in un unico sistema.
 </p>

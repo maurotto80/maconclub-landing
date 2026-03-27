@@ -16,8 +16,8 @@ export default function SoftwareGestionaleASDClient() {
         <div className="max-w-4xl mx-auto">
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
-            Software gestionale per ASD sportive
-          </h1>
+Software gestionale per ASD e società sportive
+</h1>
 
           <p className="mt-6 text-lg text-gray-700">
             Se gestisci un’associazione sportiva dilettantistica e stai ancora
@@ -238,6 +238,30 @@ export default function SoftwareGestionaleASDClient() {
       riducendo il rischio di errori amministrativi
       e migliorando la trasparenza della gestione.
     </p>
+
+  </div>
+</section>
+
+<section className="py-20 px-6 bg-white">
+  <div className="max-w-4xl mx-auto">
+
+    <h2 className="text-3xl font-bold text-center">
+      Un software gestionale per ogni tipo di ASD
+    </h2>
+
+    <p className="mt-6 text-lg text-gray-700">
+      MaconClub è progettato per adattarsi a diverse realtà sportive.
+      Che tu gestisca una scuola calcio, una polisportiva o
+      un’accademia sportiva, il gestionale permette di organizzare
+      atleti, allenatori, presenze e pagamenti in modo semplice.
+    </p>
+
+    <ul className="mt-8 space-y-3 text-gray-700 text-lg">
+      <li>• Gestionale per scuole calcio</li>
+      <li>• Gestionale per polisportive</li>
+      <li>• Gestionale per accademie sportive</li>
+      <li>• Software gestionale per associazioni sportive dilettantistiche</li>
+    </ul>
 
   </div>
 </section>

@@ -14,16 +14,20 @@ export default function GestionaleAsdClient() {
         <div className="max-w-4xl mx-auto">
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold">
-            Gestionale per ASD
-          </h1>
+Gestionale per ASD: come gestire una associazione sportiva in modo digitale
+</h1>
 
           <p className="mt-6 text-lg text-gray-700">
-            MaconClub è il gestionale per ASD progettato per
-            semplificare la gestione sportiva e amministrativa
-            delle associazioni sportive dilettantistiche.
-            Un’unica piattaforma per atleti, allenamenti,
-            pagamenti, ricevute fiscali e contabilità.
-          </p>
+Gestire una associazione sportiva dilettantistica può
+diventare complesso quando atleti, pagamenti,
+allenamenti e documenti vengono gestiti con fogli Excel
+o sistemi separati.
+
+Un <strong>gestionale per ASD</strong> come MaconClub permette
+di centralizzare tutte le attività della società sportiva
+in un'unica piattaforma digitale: gestione atleti,
+calendari, pagamenti, ricevute fiscali e contabilità.
+</p>
 
           <div className="mt-8">
             <button
@@ -36,6 +40,29 @@ export default function GestionaleAsdClient() {
 
         </div>
       </section>
+      {/* COSA È UN GESTIONALE ASD */}
+<section className="py-20 px-6 bg-white">
+  <div className="max-w-4xl mx-auto">
+
+    <h2 className="text-3xl font-bold text-center">
+      Cos'è un gestionale per ASD
+    </h2>
+
+    <p className="mt-6 text-lg text-gray-700">
+      Un gestionale per ASD è un software progettato
+      per aiutare le associazioni sportive dilettantistiche
+      a organizzare le attività sportive e amministrative.
+    </p>
+
+    <p className="mt-4 text-gray-700">
+      Attraverso un gestionale sportivo è possibile
+      gestire atleti, allenamenti, presenze,
+      pagamenti e documenti in modo centralizzato,
+      riducendo errori manuali e perdita di tempo.
+    </p>
+
+  </div>
+</section>
 
 
       {/* GESTIONE ATLETI */}
@@ -131,6 +158,25 @@ export default function GestionaleAsdClient() {
 
         </div>
       </section>
+
+      {/* A CHI SERVE */}
+<section className="py-20 bg-gray-50 px-6">
+  <div className="max-w-4xl mx-auto">
+
+    <h2 className="text-3xl font-bold text-center">
+      A chi serve un gestionale per ASD
+    </h2>
+
+    <ul className="mt-8 space-y-3 text-lg text-gray-700">
+      <li>• Associazioni sportive dilettantistiche</li>
+      <li>• Polisportive</li>
+      <li>• Scuole calcio</li>
+      <li>• Accademie sportive</li>
+      <li>• Società sportive dilettantistiche</li>
+    </ul>
+
+  </div>
+</section>
 
 
       {/* CTA */}

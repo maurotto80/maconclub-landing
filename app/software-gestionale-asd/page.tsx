@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import SoftwareGestionaleASDClient from "./SoftwareGestionaleASDClient";
 
 export const metadata: Metadata = {
-  title: "Software gestionale per ASD sportive | Gestione atleti, pagamenti e contabilità | MaconClub",
+  title: "Software gestionale per ASD e società sportive | MaconClub",
   description:
   "Software gestionale per ASD sportive che unisce gestione atleti, pagamenti, ricevute fiscali, libro soci e prima nota in un’unica piattaforma professionale. Da 19€/mese. Richiedi una demo gratuita.",
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "Gestionale completo per ASD: gestione atleti, pagamenti e contabilità integrati.",
   url: "https://maconclub.com/software-gestionale-asd",
   siteName: "MaconClub",
-  type: "website",
+  type: "article",
 },
   alternates: {
     canonical: "https://maconclub.com/software-gestionale-asd",

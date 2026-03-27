@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Prezzi MaconClub | Software gestionale per ASD sportive",
+  title: "Prezzi MaconClub | Software gestionale per ASD e società sportive",
   description:
-    "Scopri i prezzi di MaconClub: software gestionale per ASD sportive con gestione atleti, pagamenti, ricevute fiscali, libro soci e contabilità.",
+  "Prezzi MaconClub: software gestionale per ASD e società sportive con gestione atleti, allenamenti, pagamenti, ricevute fiscali, libro soci e contabilità integrata.",
 };
 
 export default function PricingPage() {
@@ -134,6 +134,31 @@ export default function PricingPage() {
         </div>
       </section>
 
+      {/* PREZZI SOFTWARE GESTIONALE ASD */}
+<section className="py-20 bg-white px-6">
+  <div className="max-w-4xl mx-auto">
+
+    <h2 className="text-3xl font-bold text-center">
+      Quanto costa un software gestionale per ASD
+    </h2>
+
+    <p className="mt-6 text-lg text-gray-700 text-center">
+      Il costo di un gestionale per associazioni sportive
+      dipende dalle funzionalità offerte.
+      MaconClub propone diversi piani pensati per
+      società sportive di ogni dimensione.
+    </p>
+
+    <p className="mt-4 text-gray-700 text-center">
+      Dalla gestione di atleti e allenamenti fino
+      alla contabilità completa con ricevute fiscali,
+      libro soci e prima nota, puoi scegliere il piano
+      più adatto alla tua associazione sportiva.
+    </p>
+
+  </div>
+</section>
+
       {/* CTA */}
       <section className="py-20 text-center px-6">
         <h2 className="text-3xl font-bold">
@@ -153,11 +178,13 @@ export default function PricingPage() {
           </a>
 
           <a
-            href="https://wa.me/393351004423"
-            className="px-6 py-3 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700"
-          >
-            WhatsApp
-          </a>
+  href="https://wa.me/393351004423"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-6 py-3 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700"
+>
+  WhatsApp
+</a>
         </div>
       </section>
 

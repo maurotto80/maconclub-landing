@@ -15,15 +15,17 @@ export default function SoftwareContabilitaASDClient() {
         <div className="max-w-4xl mx-auto">
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold">
-            Software per la contabilità delle ASD
-          </h1>
+  Software per la contabilità delle ASD e associazioni sportive
+</h1>
 
           <p className="mt-6 text-lg text-gray-700">
-            Gestire la contabilità di un’associazione sportiva dilettantistica
-            è complesso. Ricevute fiscali, libro soci, prima nota e bilanci
-            richiedono precisione e controllo. Con MaconClub hai tutto integrato
-            in un unico sistema professionale.
-          </p>
+La <strong>contabilità delle ASD</strong> richiede attenzione e precisione.
+Ricevute fiscali, libro soci, prima nota e bilanci devono essere
+gestiti correttamente per rispettare la normativa delle associazioni
+sportive dilettantistiche. Con MaconClub puoi gestire tutta la
+<strong>contabilità della tua associazione sportiva</strong> in un unico
+software professionale.
+</p>
 
           <div className="mt-8">
             <button
@@ -89,12 +91,38 @@ export default function SoftwareContabilitaASDClient() {
         </div>
       </section>
 
+      {/* CONTABILITÀ ASD */}
+<section className="py-20 bg-white px-6">
+  <div className="max-w-4xl mx-auto">
+
+    <h2 className="text-3xl font-bold text-center">
+      Come funziona la contabilità di una ASD
+    </h2>
+
+    <p className="mt-6 text-lg text-gray-700">
+      Le associazioni sportive dilettantistiche devono gestire
+      correttamente entrate e uscite economiche.
+      Quote associative, contributi, sponsorizzazioni e
+      pagamenti degli atleti devono essere registrati
+      nella contabilità dell'associazione.
+    </p>
+
+    <p className="mt-4 text-gray-700">
+      Utilizzare un software per la contabilità delle ASD
+      permette di tenere sotto controllo prima nota,
+      ricevute fiscali e bilanci in modo semplice,
+      evitando errori e perdite di dati.
+    </p>
+
+  </div>
+</section>
+
       {/* CTA */}
       <section className="py-20 bg-gray-50 text-center px-6">
         <div className="max-w-3xl mx-auto">
 
           <h2 className="text-3xl font-bold">
-            Semplifica la contabilità della tua associazione sportiva
+            Semplifica la contabilità della tua ASD
           </h2>
 
           <p className="mt-6 text-lg text-gray-700">

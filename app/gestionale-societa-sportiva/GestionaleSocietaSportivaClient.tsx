@@ -1,3 +1,5 @@
+//app/gestionale-societa-sportiva/GestionaleSocietaSportivaClient.tsx
+
 "use client";
 
 import React from "react";
@@ -14,14 +16,16 @@ export default function GestionaleSocietaSportivaClient() {
         <div className="max-w-4xl mx-auto">
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold">
-            Gestionale per società sportiva
-          </h1>
+  Gestionale per società sportive: organizza atleti, squadre e staff tecnico
+</h1>
 
           <p className="mt-6 text-lg text-gray-700">
-            Un gestionale professionale per società sportive
-            che vogliono organizzare atleti, staff tecnico,
-            allenamenti, presenze e comunicazioni in modo digitale.
-          </p>
+Un <strong>gestionale per società sportive</strong> permette di
+organizzare atleti, squadre, staff tecnico e allenamenti
+in modo digitale. Con MaconClub puoi gestire iscrizioni,
+presenze, convocazioni e comunicazioni interne
+senza fogli Excel o sistemi separati.
+</p>
 
           <div className="mt-8">
             <button
@@ -34,6 +38,32 @@ export default function GestionaleSocietaSportivaClient() {
 
         </div>
       </section>
+
+      {/* COSA FA UN GESTIONALE PER SOCIETÀ SPORTIVE */}
+<section className="py-20 px-6 bg-white">
+  <div className="max-w-4xl mx-auto">
+
+    <h2 className="text-3xl font-bold text-center">
+      Cosa fa un gestionale per società sportive
+    </h2>
+
+    <p className="mt-6 text-lg text-gray-700">
+      Un software gestionale per società sportive aiuta
+      dirigenti e allenatori a organizzare le attività del club.
+      Dalla gestione degli atleti fino alla comunicazione
+      con genitori e staff tecnico.
+    </p>
+
+    <ul className="mt-8 space-y-3 text-gray-700 text-lg">
+      <li>• gestione squadre e categorie</li>
+      <li>• organizzazione allenamenti</li>
+      <li>• convocazioni digitali</li>
+      <li>• comunicazioni con genitori</li>
+      <li>• monitoraggio presenze</li>
+    </ul>
+
+  </div>
+</section>
 
       {/* GESTIONE ATLETI */}
       <section className="py-20 px-6">
