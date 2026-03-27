@@ -25,6 +25,13 @@ export default function Navbar() {
   </Link>
 
   <Link
+    href="/gestionale-asd"
+    className="hover:text-blue-600"
+  >
+    Gestionale ASD
+  </Link>
+
+  <Link
     href="/gestionale-societa-sportiva"
     className="hover:text-blue-600"
   >
@@ -44,8 +51,6 @@ export default function Navbar() {
   >
     Prezzi
   </Link>
-
-  
 </nav>
 
         {/* Hamburger Button */}
@@ -62,27 +67,28 @@ export default function Navbar() {
         <div className="md:hidden bg-white border-t">
           <div className="flex flex-col px-6 py-4 gap-4 font-medium text-gray-700">
             <Link href="/" onClick={() => setOpen(false)}>
-              Home
-            </Link>
+  Home
+</Link>
 
-            <Link
-              href="/gestionale-societa-sportiva"
-              onClick={() => setOpen(false)}
-            >
-              Gestionale Società Sportiva
-            </Link>
-
-            <Link
-              href="/software-gestionale-asd"
-              onClick={() => setOpen(false)}
-            >
-              Software Gestionale ASD
-            </Link>
-            <Link
-  href="/prezzi"
+<Link
+  href="/gestionale-asd"
   onClick={() => setOpen(false)}
 >
-  Prezzi
+  Gestionale ASD
+</Link>
+
+<Link
+  href="/gestionale-societa-sportiva"
+  onClick={() => setOpen(false)}
+>
+  Gestionale Società Sportiva
+</Link>
+
+<Link
+  href="/software-gestionale-asd"
+  onClick={() => setOpen(false)}
+>
+  Software Gestionale ASD
 </Link>
           </div>
         </div>
