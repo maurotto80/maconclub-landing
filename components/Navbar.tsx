@@ -104,6 +104,13 @@ export default function Navbar() {
 >
   Programma ASD
 </Link>
+
+<Link
+  href="/prezzi"
+  onClick={() => setOpen(false)}
+>
+  Prezzi
+</Link>
           </div>
         </div>
       )}
