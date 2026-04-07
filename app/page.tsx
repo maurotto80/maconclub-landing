@@ -18,7 +18,7 @@ export default function Home() {
 <section className="relative bg-[url('/hero.jpg')] bg-cover bg-center min-h-[90vh]">
 
   {/* Overlay */}
-  <div className="absolute inset-0 bg-black/60" />
+  <div className="absolute inset-0 bg-black/60 z-0" />
 
   
   {/* HERO CONTENT */}
