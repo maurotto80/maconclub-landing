@@ -1,6 +1,7 @@
 //app/page.tsx
 
-import DemoForm from "@/components/DemoForm";
+import DemoModal from "@/components/DemoModal";
+import React from "react";
 
 export const metadata = {
   title: "Software gestionale per ASD e società sportive | MaconClub",
@@ -9,6 +10,9 @@ export const metadata = {
 };
 
 export default function Home() {
+
+  const [showDemoForm, setShowDemoForm] = React.useState(false);
+
   return (
   <main className="bg-white text-gray-900">
 
@@ -38,7 +42,12 @@ dilettantistiche che vogliono organizzare al meglio la propria attività.
 </p>
 
     <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
-      <DemoForm />
+      <button
+  onClick={() => setShowDemoForm(true)}
+  className="w-full sm:w-auto px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 font-semibold"
+>
+  Richiedi una demo gratuita
+</button>
 
       <a
         href="https://wa.me/393351004423"
@@ -322,6 +331,10 @@ o il nostro{" "}
           </a>
         </p>
       </footer>
+      <DemoModal
+  open={showDemoForm}
+  onClose={() => setShowDemoForm(false)}
+/>
     </main>
   );
 }
