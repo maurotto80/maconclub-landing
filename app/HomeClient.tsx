@@ -302,14 +302,24 @@ export default function HomeClient() {
 
       {/* FOOTER */}
       <footer className="bg-gray-900 text-white py-10 text-center">
-        <p className="font-semibold">MaconClub © {new Date().getFullYear()}</p>
-        <p className="mt-2">
-          Contatti:{" "}
-          <a className="underline" href="mailto:info@maconclub.com">
-            info@maconclub.com
-          </a>
-        </p>
-      </footer>
+  <p className="font-semibold">MaconClub © {new Date().getFullYear()}</p>
+
+  <p className="mt-2">
+    Contatti:{" "}
+    <a className="underline" href="mailto:info@maconclub.com">
+      info@maconclub.com
+    </a>
+  </p>
+
+  <p className="mt-2">
+    <a
+      href="/privacy"
+      className="underline text-gray-300 hover:text-white"
+    >
+      Privacy Policy
+    </a>
+  </p>
+</footer>
 
       <DemoModal
         open={showDemoForm}
