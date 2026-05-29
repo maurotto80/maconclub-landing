@@ -53,6 +53,13 @@ export default function Navbar() {
 </Link>
 
 <Link
+  href="/help"
+  className="hover:text-blue-600"
+>
+  Help Center
+</Link>
+
+<Link
   href="/prezzi"
   className="hover:text-blue-600"
 >
@@ -103,6 +110,13 @@ export default function Navbar() {
   onClick={() => setOpen(false)}
 >
   Programma ASD
+</Link>
+
+<Link
+  href="/help"
+  onClick={() => setOpen(false)}
+>
+  Help Center
 </Link>
 
 <Link
