@@ -6,14 +6,18 @@ import { notFound } from "next/navigation";
 import { helpCategories } from "@/data/help-content";
 
 type Props = {
-  params: {
+  params: Promise<{
     category: string;
-  };
+  }>;
 };
 
-export default function HelpCategoryPage({ params }: Props) {
+export default async function HelpCategoryPage({
+  params,
+}: Props) {
+  const { category: categorySlug } = await params;
+
   const category = helpCategories.find(
-    (c) => c.slug === params.category
+    (c) => c.slug === categorySlug
   );
 
   if (!category) {
@@ -23,7 +27,6 @@ export default function HelpCategoryPage({ params }: Props) {
   return (
     <main className="bg-gray-50 min-h-screen">
 
-      {/* HERO */}
       <section className="bg-blue-600 text-white py-16">
         <div className="max-w-6xl mx-auto px-6">
 
@@ -50,7 +53,6 @@ export default function HelpCategoryPage({ params }: Props) {
         </div>
       </section>
 
-      {/* CONTENUTO */}
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-6">
 
@@ -62,10 +64,6 @@ export default function HelpCategoryPage({ params }: Props) {
 
             <p className="mt-4 text-gray-600">
               Nessuna guida disponibile al momento.
-            </p>
-
-            <p className="mt-2 text-gray-500">
-              I contenuti verranno aggiunti progressivamente con:
             </p>
 
             <ul className="mt-6 space-y-2 text-gray-700">
