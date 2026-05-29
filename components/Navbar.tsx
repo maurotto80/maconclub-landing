@@ -38,13 +38,7 @@ export default function Navbar() {
     Gestionale Società Sportiva
   </Link>
 
-  <Link
-  href="/software-gestionale-asd"
-  className="hover:text-blue-600"
->
-  Software Gestionale ASD
-</Link>
-
+ 
 <Link
   href="/programma-gestione-associazione-sportiva"
   className="hover:text-blue-600"
@@ -98,12 +92,6 @@ export default function Navbar() {
   Gestionale Società Sportiva
 </Link>
 
-<Link
-  href="/software-gestionale-asd"
-  onClick={() => setOpen(false)}
->
-  Software Gestionale ASD
-</Link>
 
 <Link
   href="/programma-gestione-associazione-sportiva"
