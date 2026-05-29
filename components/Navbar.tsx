@@ -20,9 +20,7 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center gap-8 font-medium text-gray-700">
-  <Link href="/" className="hover:text-blue-600">
-    Home
-  </Link>
+ 
 
   <Link
     href="/gestionale-asd"
@@ -74,9 +72,7 @@ export default function Navbar() {
       {open && (
         <div className="md:hidden bg-white border-t">
           <div className="flex flex-col px-6 py-4 gap-4 font-medium text-gray-700">
-            <Link href="/" onClick={() => setOpen(false)}>
-  Home
-</Link>
+            
 
 <Link
   href="/gestionale-asd"
