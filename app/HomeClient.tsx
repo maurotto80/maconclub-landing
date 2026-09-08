@@ -17,9 +17,83 @@ export default function HomeClient() {
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 lg:py-28 text-white">
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
-            Software gestionale per <strong>ASD e società sportive</strong>
-          </h1>
+          <h1
+  className="
+    text-3xl
+    sm:text-4xl
+    lg:text-[42px]
+    xl:text-[46px]
+    font-extrabold
+    leading-tight
+    lg:whitespace-nowrap
+  "
+>
+  Software gestionale per{" "}
+  <strong>ASD e società sportive</strong>
+</h1>
+
+{/* SOCIETÀ CHE USANO MACONCLUB */}
+<div className="mt-8">
+
+  <p className="text-sm sm:text-base font-semibold text-white/80">
+    Già scelto da società sportive in tutta Italia
+  </p>
+
+  <div
+    className="
+      mt-5
+      flex
+      flex-wrap
+      items-center
+      justify-center
+      lg:justify-start
+      gap-3
+      sm:gap-4
+    "
+  >
+    {[
+      "/clubs/club-1.png",
+      "/clubs/club-2.png",
+      "/clubs/club-3.png",
+      "/clubs/club-4.png",
+      "/clubs/club-5.png",
+      "/clubs/club-6.png",
+      "/clubs/club-7.png",
+    ].map((logo, index) => (
+      <div
+        key={logo}
+        className="
+          w-16 h-16
+          sm:w-20 sm:h-20
+          lg:w-[86px] lg:h-[86px]
+          rounded-full
+          bg-white
+          border border-white/30
+          shadow-lg
+          flex
+          items-center
+          justify-center
+          p-2
+          overflow-hidden
+          transition-transform
+          hover:scale-105
+        "
+      >
+        <img
+          src={logo}
+          alt={`Società sportiva ${index + 1}`}
+          className="
+            w-full
+            h-full
+            object-contain
+            rounded-full
+          "
+        />
+      </div>
+    ))}
+  </div>
+
+</div>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
 
