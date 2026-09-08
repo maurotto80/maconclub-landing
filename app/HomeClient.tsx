@@ -15,7 +15,7 @@ export default function HomeClient() {
 
         <div className="absolute inset-0 bg-black/60 z-0" />
 
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 lg:py-28 text-white">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 lg:py-28 text-white text-center">
 
           <h1
   className="
@@ -40,17 +40,16 @@ export default function HomeClient() {
   </p>
 
   <div
-    className="
-      mt-5
-      flex
-      flex-wrap
-      items-center
-      justify-center
-      lg:justify-start
-      gap-3
-      sm:gap-4
-    "
-  >
+  className="
+    mt-5
+    flex
+    flex-wrap
+    items-center
+    justify-center
+    gap-3
+    sm:gap-4
+  "
+>
     {[
       "/clubs/club-1.png",
       "/clubs/club-2.png",
@@ -95,7 +94,7 @@ export default function HomeClient() {
 
 </div>
 
-          <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
 
             <button
               onClick={() => setShowDemoForm(true)}
