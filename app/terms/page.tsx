@@ -218,6 +218,18 @@ export default function TermsPage() {
           </h2>
 
           <p>
+  Gli utenti possono inoltre consultare le{" "}
+  <a
+    href="/data-deletion"
+    className="underline text-blue-600"
+  >
+    istruzioni per richiedere la cancellazione dei propri dati
+  </a>
+  .
+</p>
+
+
+          <p>
             Il trattamento dei dati personali effettuato
             attraverso MaconClub è descritto nella{" "}
             <a
