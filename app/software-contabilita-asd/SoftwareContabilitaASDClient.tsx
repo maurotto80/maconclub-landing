@@ -208,14 +208,21 @@ software professionale.
     </a>
   </p>
 
-  <p className="mt-2">
-    <a
-      href="/privacy"
-      className="underline text-gray-300 hover:text-white"
-    >
-      Privacy Policy
-    </a>
-  </p>
+  <div className="mt-2 flex justify-center gap-4">
+  <a
+    href="/privacy"
+    className="underline text-gray-300 hover:text-white"
+  >
+    Privacy Policy
+  </a>
+
+  <a
+    href="/terms"
+    className="underline text-gray-300 hover:text-white"
+  >
+    Termini e Condizioni
+  </a>
+</div>
 </footer>
 
       <DemoModal

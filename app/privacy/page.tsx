@@ -1,7 +1,7 @@
 export default function PrivacyPage() {
   return (
-    <main className="bg-white text-gray-900 px-6 py-16">
-      <div className="max-w-3xl mx-auto">
+    <main className="bg-white text-gray-900 pt-16">
+      <div className="max-w-3xl mx-auto px-6">
 
         <h1 className="text-3xl font-bold mb-6">
           Privacy Policy – MaconClub
@@ -282,35 +282,43 @@ export default function PrivacyPage() {
             superiore della pagina.
           </p>
 
-        </section>
-
-        {/* FOOTER */}
-        <footer className="bg-gray-900 text-white py-10 text-center mt-16">
-          <p className="font-semibold">
-            MaconClub © {new Date().getFullYear()}
-          </p>
-
-          <p className="mt-2">
-            Contatti:{" "}
-            <a
-              className="underline"
-              href="mailto:info@maconclub.com"
-            >
-              info@maconclub.com
-            </a>
-          </p>
-
-          <p className="mt-2">
-            <a
-              href="/privacy"
-              className="underline text-gray-300 hover:text-white"
-            >
-              Privacy Policy
-            </a>
-          </p>
-        </footer>
+                </section>
 
       </div>
+
+      {/* FOOTER */}
+      <footer className="bg-gray-900 text-white py-10 text-center mt-16">
+        <p className="font-semibold">
+          MaconClub © {new Date().getFullYear()}
+        </p>
+
+        <p className="mt-2">
+          Contatti:{" "}
+          <a
+            className="underline"
+            href="mailto:info@maconclub.com"
+          >
+            info@maconclub.com
+          </a>
+        </p>
+
+        <div className="mt-2 flex justify-center gap-4">
+  <a
+    href="/privacy"
+    className="underline text-gray-300 hover:text-white"
+  >
+    Privacy Policy
+  </a>
+
+  <a
+    href="/terms"
+    className="underline text-gray-300 hover:text-white"
+  >
+    Termini e Condizioni
+  </a>
+</div>
+      </footer>
+
     </main>
   );
 }
