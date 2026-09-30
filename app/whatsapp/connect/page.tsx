@@ -172,24 +172,26 @@ const launchWhatsAppSignup = () => {
  return (
   <>
     <Script
-      id="facebook-jssdk"
-      src="https://connect.facebook.net/en_US/sdk.js"
-      strategy="afterInteractive"
-      onLoad={() => {
-        const win = window as any;
+  id="facebook-jssdk"
+  src="https://connect.facebook.net/en_US/sdk.js"
+  strategy="afterInteractive"
+  onLoad={() => {
+    const win = window as any;
 
-        if (
-          win.fbAsyncInit &&
-          !win.FB
-        ) {
-          return;
-        }
+    if (!win.FB) {
+      return;
+    }
 
-        if (win.fbAsyncInit) {
-          win.fbAsyncInit();
-        }
-      }}
-    />
+    win.FB.init({
+      appId: "1405121921742811",
+      cookie: true,
+      xfbml: false,
+      version: "v24.0",
+    });
+
+    setSdkReady(true);
+  }}
+/>
 
     <main
       style={{
