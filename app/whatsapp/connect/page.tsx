@@ -163,7 +163,9 @@ const launchWhatsAppSignup = () => {
         true,
 
       extras: {
-        version: "v4",
+  version: "v4",
+  featureType:
+    "whatsapp_business_app_onboarding",
       },
     }
   );
