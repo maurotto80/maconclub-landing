@@ -1,8 +1,32 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import {
+  useEffect,
+  useState,
+} from "react";
 import Script from "next/script";
 export default function WhatsAppConnectPage() {
+
+    const [
+    connectSession,
+    setConnectSession,
+  ] = useState<string | null>(null);
+
+  const [
+    sessionChecked,
+    setSessionChecked,
+  ] = useState(false);
+
+  const [
+  sessionValid,
+  setSessionValid,
+] = useState(false);
+
+const [
+  sessionError,
+  setSessionError,
+] = useState<string | null>(null);
+
   const [
     loading,
     setLoading,
@@ -22,6 +46,69 @@ const [
   phoneNumberId,
   setPhoneNumberId,
 ] = useState<string | null>(null);
+
+useEffect(() => {
+  const validateSession =
+    async () => {
+      const params =
+        new URLSearchParams(
+          window.location.search
+        );
+
+      const session =
+        params.get("session")?.trim();
+
+      if (!session) {
+        setSessionChecked(true);
+        return;
+      }
+
+      try {
+        const response =
+          await fetch(
+            "https://api.maconclub.com/api/whatsapp/embedded-signup/session/validate",
+            {
+              method: "POST",
+
+              headers: {
+                "Content-Type":
+                  "application/json",
+              },
+
+              body: JSON.stringify({
+                connectToken: session,
+              }),
+            }
+          );
+
+        const data =
+          await response.json();
+
+        if (
+          !response.ok ||
+          data?.valid !== true
+        ) {
+          setSessionError(
+            data?.error ||
+              "Sessione di collegamento non valida"
+          );
+
+          return;
+        }
+
+        setConnectSession(session);
+        setSessionValid(true);
+      } catch {
+        setSessionError(
+          "Impossibile verificare la sessione di collegamento."
+        );
+      } finally {
+        setSessionChecked(true);
+      }
+    };
+
+  validateSession();
+}, []);
 
 useEffect(() => {
   const handleMessage = (
@@ -170,6 +257,61 @@ const launchWhatsAppSignup = () => {
     }
   );
 };
+
+if (!sessionChecked) {
+  return null;
+}
+
+if (
+  !connectSession ||
+  !sessionValid
+) {
+  return (
+    <main
+      style={{
+        minHeight: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: 24,
+        backgroundColor: "#f8fafc",
+      }}
+    >
+      <div
+        style={{
+          width: "100%",
+          maxWidth: 520,
+          backgroundColor: "#ffffff",
+          border: "1px solid #fecaca",
+          borderRadius: 20,
+          padding: 28,
+        }}
+      >
+        <h1
+          style={{
+            margin: 0,
+            fontSize: 24,
+            color: "#991b1b",
+          }}
+        >
+          Collegamento non valido
+        </h1>
+
+        <p
+  style={{
+    marginTop: 12,
+    marginBottom: 0,
+    color: "#64748b",
+    lineHeight: 1.6,
+  }}
+>
+  {sessionError ||
+    "Avvia il collegamento WhatsApp direttamente dall'app MaconClub."}
+</p>
+      </div>
+    </main>
+  );
+}
 
  return (
   <>
