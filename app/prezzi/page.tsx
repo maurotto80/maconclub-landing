@@ -127,7 +127,7 @@ export default function PricingPage() {
     </span>
   </p>
 
-  <ul className="mt-6 space-y-2 text-gray-700 text-sm">
+    <ul className="mt-6 space-y-2 text-gray-700 text-sm">
     <li>✔ Tutto PRO</li>
     <li>✔ Prima nota contabile</li>
     <li>✔ Categorie contabili</li>
@@ -139,6 +139,8 @@ export default function PricingPage() {
     <li>✔ Gestione compensi</li>
   </ul>
 </div>
+
+        </div>
       </section>
 
       {/* ADD-ON */}
