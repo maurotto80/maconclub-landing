@@ -199,7 +199,7 @@ useEffect(() => {
   };
 }, []);
 
-const fbLoginCallback = (
+const fbLoginCallback = async (
   response: any
 ) => {
   if (
@@ -209,20 +209,75 @@ const fbLoginCallback = (
     return;
   }
 
+  if (!connectSession) {
+    setSessionError(
+      "Sessione di collegamento non disponibile."
+    );
+
+    setLoading(false);
+    return;
+  }
+
   const code =
     response.authResponse.code;
 
-  /*
-   * Il code NON va scambiato
-   * direttamente dal browser.
-   *
-   * Nel prossimo passaggio invieremo
-   * al backend MaconClub:
-   *
-   * - code
-   * - whatsappBusinessAccountId
-   * - phoneNumberId
-   */
+  try {
+    const backendResponse =
+      await fetch(
+        "https://api.maconclub.com/api/whatsapp/embedded-signup/bridge/complete",
+        {
+          method: "POST",
+
+          headers: {
+            "Content-Type":
+              "application/json",
+          },
+
+          body: JSON.stringify({
+            connectToken:
+              connectSession,
+
+            code,
+
+            whatsappBusinessAccountId,
+
+            phoneNumberId,
+          }),
+        }
+      );
+
+    const data =
+      await backendResponse.json();
+
+    if (
+      !backendResponse.ok ||
+      data?.success !== true
+    ) {
+      throw new Error(
+        data?.error ||
+          "Collegamento WhatsApp non completato"
+      );
+    }
+
+    /*
+     * Per ora confermiamo soltanto
+     * che backend + sessione + code Meta
+     * sono arrivati correttamente.
+     *
+     * Il prossimo passaggio completerà
+     * lo scambio e la verifica degli
+     * asset direttamente con Meta.
+     */
+
+    setSessionError(null);
+  } catch (error: any) {
+    setSessionError(
+      error?.message ||
+        "Errore durante il collegamento WhatsApp Business."
+    );
+  } finally {
+    setLoading(false);
+  }
 };
 
 const launchWhatsAppSignup = () => {

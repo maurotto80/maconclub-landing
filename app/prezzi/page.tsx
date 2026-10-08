@@ -27,112 +27,157 @@ export default function PricingPage() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-6">
 
           {/* BASE */}
-          <div className="bg-white p-8 rounded-2xl shadow">
-            <h3 className="text-xl font-bold text-blue-600">
-              BASE
-            </h3>
+<div className="bg-white p-8 rounded-2xl shadow">
+  <h3 className="text-xl font-bold text-blue-600">
+    BASE
+  </h3>
 
-            <p className="mt-2 text-gray-600">
-              Gestione sportiva essenziale
-            </p>
+  <p className="mt-2 text-gray-600">
+    Gestione sportiva essenziale
+  </p>
 
-            <p className="text-3xl font-extrabold mt-6">
-              19€
-              <span className="text-sm font-normal text-gray-500">
-                /mese
-              </span>
-            </p>
+  <p className="text-3xl font-extrabold mt-6">
+    19€
+    <span className="text-sm font-normal text-gray-500">
+      /mese
+    </span>
+  </p>
 
-            <ul className="mt-6 space-y-2 text-gray-700 text-sm">
-              <li>✔ Atleti e gruppi</li>
-              <li>✔ Allenatori</li>
-              <li>✔ Genitori</li>
-              <li>✔ Calendario eventi</li>
-              <li>✔ Account utenti</li>
-              <li>✔ Iscrizioni</li>
-            </ul>
-          </div>
+  <ul className="mt-6 space-y-2 text-gray-700 text-sm">
+    <li>✔ Atleti e gruppi</li>
+    <li>✔ Allenatori</li>
+    <li>✔ Genitori</li>
+    <li>✔ Calendario allenamenti</li>
+    <li>✔ Iscrizioni online</li>
+    <li>✔ Documenti atleti</li>
+    <li>✔ Gestione stagioni</li>
+    <li>✔ Account utenti</li>
+  </ul>
+</div>
 
           {/* PLUS */}
-          <div className="bg-white p-8 rounded-2xl shadow border-2 border-blue-600">
-            <h3 className="text-xl font-bold text-blue-600">
-              PLUS
-            </h3>
+<div className="bg-white p-8 rounded-2xl shadow border-2 border-blue-600">
+  <h3 className="text-xl font-bold text-blue-600">
+    PLUS
+  </h3>
 
-            <p className="mt-2 text-gray-600">
-              Gestione sportiva avanzata
-            </p>
+  <p className="mt-2 text-gray-600">
+    Gestione sportiva ed economica
+  </p>
 
-            <p className="text-3xl font-extrabold mt-6">
-              24€
-              <span className="text-sm font-normal text-gray-500">
-                /mese
-              </span>
-            </p>
+  <p className="text-3xl font-extrabold mt-6">
+    24€
+    <span className="text-sm font-normal text-gray-500">
+      /mese
+    </span>
+  </p>
 
-            <ul className="mt-6 space-y-2 text-gray-700 text-sm">
-              <li>✔ Tutto BASE</li>
-              <li>✔ Presenze allenamenti</li>
-              <li>✔ Sessioni allenamento</li>
-              <li>✔ Pagamenti rateizzati</li>
-              <li>✔ Ricevute PDF</li>
-            </ul>
-          </div>
+  <ul className="mt-6 space-y-2 text-gray-700 text-sm">
+    <li>✔ Tutto BASE</li>
+    <li>✔ Presenze allenamenti</li>
+    <li>✔ Sessioni allenamento</li>
+    <li>✔ Situazione economica atleti</li>
+    <li>✔ Gestione quote e rate</li>
+    <li>✔ Tariffe</li>
+    <li>✔ Pagamenti registrati</li>
+    <li>✔ Ricevute</li>
+  </ul>
+</div>
 
           {/* PRO */}
-          <div className="bg-white p-8 rounded-2xl shadow">
-            <h3 className="text-xl font-bold text-blue-600">
-              PRO
-            </h3>
+<div className="bg-white p-8 rounded-2xl shadow">
+  <h3 className="text-xl font-bold text-blue-600">
+    PRO
+  </h3>
 
-            <p className="mt-2 text-gray-600">
-              Comunicazione e media
-            </p>
+  <p className="mt-2 text-gray-600">
+    Comunicazione e coinvolgimento
+  </p>
 
-            <p className="text-3xl font-extrabold mt-6">
-              29€
-              <span className="text-sm font-normal text-gray-500">
-                /mese
-              </span>
-            </p>
+  <p className="text-3xl font-extrabold mt-6">
+    29€
+    <span className="text-sm font-normal text-gray-500">
+      /mese
+    </span>
+  </p>
 
-            <ul className="mt-6 space-y-2 text-gray-700 text-sm">
-              <li>✔ Tutto PLUS</li>
-              <li>✔ Album foto</li>
-              <li>✔ Comunicazioni interne</li>
-              <li>✔ Convocazioni partite</li>
-              <li>✔ Notifiche push</li>
-            </ul>
-          </div>
+  <ul className="mt-6 space-y-2 text-gray-700 text-sm">
+    <li>✔ Tutto PLUS</li>
+    <li>✔ Bacheca comunicazioni</li>
+    <li>✔ Convocazioni</li>
+    <li>✔ Galleria foto</li>
+    <li>✔ Notifiche push</li>
+  </ul>
+</div>
 
           {/* ENTERPRISE */}
-          <div className="bg-white p-8 rounded-2xl shadow">
-            <h3 className="text-xl font-bold text-green-600">
-              ENTERPRISE
-            </h3>
+<div className="bg-white p-8 rounded-2xl shadow">
+  <h3 className="text-xl font-bold text-green-600">
+    ENTERPRISE
+  </h3>
 
-            <p className="mt-2 text-gray-600">
-              Gestione amministrativa completa
-            </p>
+  <p className="mt-2 text-gray-600">
+    Gestione amministrativa completa
+  </p>
 
-            <p className="text-3xl font-extrabold mt-6">
-              49€
-              <span className="text-sm font-normal text-gray-500">
-                /mese
-              </span>
-            </p>
+  <p className="text-3xl font-extrabold mt-6">
+    49€
+    <span className="text-sm font-normal text-gray-500">
+      /mese
+    </span>
+  </p>
 
-            <ul className="mt-6 space-y-2 text-gray-700 text-sm">
-              <li>✔ Tutto PRO</li>
-              <li>✔ Prima nota contabile</li>
-              <li>✔ Libro soci</li>
-              <li>✔ Collaboratori</li>
-              <li>✔ Gestione compensi</li>
-            </ul>
-          </div>
-
-        </div>
+  <ul className="mt-6 space-y-2 text-gray-700 text-sm">
+    <li>✔ Tutto PRO</li>
+    <li>✔ Prima nota contabile</li>
+    <li>✔ Categorie contabili</li>
+    <li>✔ Bilancio stagione</li>
+    <li>✔ Rendiconto annuale</li>
+    <li>✔ Libro soci</li>
+    <li>✔ Verbali consiglio</li>
+    <li>✔ Collaboratori e staff</li>
+    <li>✔ Gestione compensi</li>
+  </ul>
+</div>
       </section>
+
+      {/* ADD-ON */}
+<section className="py-16 px-6 bg-white">
+  <div className="max-w-5xl mx-auto">
+    <h2 className="text-3xl font-bold text-center">
+      Moduli aggiuntivi
+    </h2>
+
+    <p className="mt-4 text-gray-600 text-center max-w-2xl mx-auto">
+      Attiva solo i servizi aggiuntivi che servono alla tua associazione.
+    </p>
+
+    <div className="mt-10 grid md:grid-cols-2 gap-6">
+
+      <div className="border rounded-2xl p-6">
+        <h3 className="text-xl font-bold">
+          WhatsApp
+        </h3>
+
+        <p className="mt-3 text-gray-600">
+          Invio comunicazioni WhatsApp direttamente dal gestionale.
+        </p>
+      </div>
+
+      <div className="border rounded-2xl p-6">
+        <h3 className="text-xl font-bold">
+          Pagamenti Online
+        </h3>
+
+        <p className="mt-3 text-gray-600">
+          Pagamento online delle quote da parte dei genitori,
+          con registrazione automatica nel gestionale.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* PREZZI SOFTWARE GESTIONALE ASD */}
 <section className="py-20 bg-white px-6">
@@ -150,11 +195,12 @@ export default function PricingPage() {
     </p>
 
     <p className="mt-4 text-gray-700 text-center">
-      Dalla gestione di atleti e allenamenti fino
-      alla contabilità completa con ricevute fiscali,
-      libro soci e prima nota, puoi scegliere il piano
-      più adatto alla tua associazione sportiva.
-    </p>
+  Dalla gestione di atleti, gruppi e allenamenti
+  fino alla gestione economica, alle ricevute,
+  alla prima nota, al bilancio, al libro soci
+  e ai collaboratori, puoi scegliere il piano
+  più adatto alla tua associazione sportiva.
+</p>
 
   </div>
 </section>
