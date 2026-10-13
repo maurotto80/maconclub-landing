@@ -128,6 +128,6 @@ export const helpArticles: HelpArticle[] = [
     ],
 
     // Inseriremo qui il link del video
-    videoUrl: undefined,
+    videoUrl: "https://www.youtube.com/embed/X8Jnrejaswo",
   },
 ];
