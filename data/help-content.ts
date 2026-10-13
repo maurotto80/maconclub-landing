@@ -107,4 +107,27 @@ export const helpCategories = [
   },
 ];
 
-export const helpArticles: HelpArticle[] = [];
+export const helpArticles: HelpArticle[] = [
+  {
+    category: "atleti",
+    slug: "creazione-manuale-atleta",
+
+    title: "Come creare manualmente un nuovo atleta",
+
+    description:
+      "Scopri come inserire manualmente un nuovo atleta " +
+      "nella tua associazione sportiva attraverso MaconClub.",
+
+    keywords: [
+      "atleta",
+      "nuovo atleta",
+      "creazione atleta",
+      "inserimento manuale",
+      "anagrafica",
+      "registrazione atleta",
+    ],
+
+    // Inseriremo qui il link del video
+    videoUrl: undefined,
+  },
+];

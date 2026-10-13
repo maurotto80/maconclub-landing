@@ -3,7 +3,10 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { helpCategories } from "@/data/help-content";
+import {
+  helpCategories,
+  helpArticles,
+} from "@/data/help-content";
 
 type Props = {
   params: Promise<{
@@ -23,6 +26,11 @@ export default async function HelpCategoryPage({
   if (!category) {
     notFound();
   }
+
+  // Recupera tutte le guide della categoria selezionata
+const articles = helpArticles.filter(
+  (article) => article.category === categorySlug
+);
 
   return (
     <main className="bg-gray-50 min-h-screen">
@@ -62,16 +70,38 @@ export default async function HelpCategoryPage({
               Guide disponibili
             </h2>
 
-            <p className="mt-4 text-gray-600">
-              Nessuna guida disponibile al momento.
-            </p>
+            {articles.length === 0 ? (
+  <p className="mt-4 text-gray-600">
+    Nessuna guida disponibile al momento.
+  </p>
+) : (
+  <div className="mt-8 grid gap-6 md:grid-cols-2">
+    {articles.map((article) => (
+      <Link
+        key={article.slug}
+        href={`/help/${categorySlug}/${article.slug}`}
+        className="block rounded-2xl border border-gray-200 p-6
+                   transition hover:border-blue-400 hover:shadow-lg"
+      >
+        <div className="mb-4 text-3xl">
+          🎥
+        </div>
 
-            <ul className="mt-6 space-y-2 text-gray-700">
-              <li>🎥 Video tutorial</li>
-              <li>🖼️ Screenshot passo passo</li>
-              <li>📄 Guide dettagliate</li>
-              <li>❓ FAQ</li>
-            </ul>
+        <h3 className="text-xl font-bold text-gray-900">
+          {article.title}
+        </h3>
+
+        <p className="mt-3 text-gray-600">
+          {article.description}
+        </p>
+
+        <div className="mt-5 font-semibold text-blue-600">
+          Guarda il tutorial →
+        </div>
+      </Link>
+    ))}
+  </div>
+)}
 
           </div>
 
