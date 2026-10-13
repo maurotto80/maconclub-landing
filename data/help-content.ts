@@ -10,6 +10,7 @@ export type HelpArticle = {
   keywords: string[];
 
   videoUrl?: string;
+  thumbnailUrl?: string;
 
   images?: string[];
 
@@ -129,5 +130,6 @@ export const helpArticles: HelpArticle[] = [
 
     // Inseriremo qui il link del video
     videoUrl: "https://www.youtube.com/embed/X8Jnrejaswo",
+    thumbnailUrl: "/help/thumbnails/creazione-manuale-atleta.png",
   },
 ];

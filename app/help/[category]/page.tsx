@@ -1,6 +1,7 @@
 //app/help/[category]/page.tsx
 
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 
 import {
@@ -78,27 +79,40 @@ const articles = helpArticles.filter(
   <div className="mt-8 grid gap-6 md:grid-cols-2">
     {articles.map((article) => (
       <Link
-        key={article.slug}
-        href={`/help/${categorySlug}/${article.slug}`}
-        className="block rounded-2xl border border-gray-200 p-6
-                   transition hover:border-blue-400 hover:shadow-lg"
-      >
-        <div className="mb-4 text-3xl">
-          🎥
-        </div>
+  key={article.slug}
+  href={`/help/${categorySlug}/${article.slug}`}
+  className="block overflow-hidden rounded-2xl border border-gray-200
+             bg-white transition hover:border-blue-400 hover:shadow-lg"
+>
+  {article.thumbnailUrl ? (
+    <div className="relative h-56 w-full bg-gray-100">
+      <Image
+        src={article.thumbnailUrl}
+        alt={article.title}
+        fill
+        className="object-cover"
+      />
+    </div>
+  ) : (
+    <div className="flex h-56 items-center justify-center bg-gray-100 text-5xl">
+      🎥
+    </div>
+  )}
 
-        <h3 className="text-xl font-bold text-gray-900">
-          {article.title}
-        </h3>
+  <div className="p-6">
+    <h3 className="text-xl font-bold text-gray-900">
+      {article.title}
+    </h3>
 
-        <p className="mt-3 text-gray-600">
-          {article.description}
-        </p>
+    <p className="mt-3 text-gray-600">
+      {article.description}
+    </p>
 
-        <div className="mt-5 font-semibold text-blue-600">
-          Guarda il tutorial →
-        </div>
-      </Link>
+    <div className="mt-5 font-semibold text-blue-600">
+      Guarda il tutorial →
+    </div>
+  </div>
+</Link>
     ))}
   </div>
 )}
