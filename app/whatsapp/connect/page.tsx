@@ -40,15 +40,10 @@ const [
   setSdkReady,
 ] = useState(false);
 
-const [
-  whatsappBusinessAccountId,
-  setWhatsAppBusinessAccountId,
-] = useState<string | null>(null);
+const [connectionCompleted, setConnectionCompleted] =
+  useState(false);
 
-const [
-  phoneNumberId,
-  setPhoneNumberId,
-] = useState<string | null>(null);
+const connectSessionRef = useRef<string | null>(null);
 
 const signupIdsRef = useRef<{
   whatsappBusinessAccountId: string | null;
@@ -107,8 +102,10 @@ useEffect(() => {
           return;
         }
 
-        setConnectSession(session);
-        setSessionValid(true);
+        connectSessionRef.current = session;
+
+setConnectSession(session);
+setSessionValid(true);
       } catch {
         setSessionError(
           "Impossibile verificare la sessione di collegamento."
@@ -165,13 +162,8 @@ useEffect(() => {
   phoneNumberId: phoneId,
 };
 
-setWhatsAppBusinessAccountId(
-  wabaId
-);
+void completeSignupIfReady();
 
-setPhoneNumberId(
-  phoneId
-);
     }
   };
 
@@ -215,88 +207,81 @@ useEffect(() => {
   };
 }, []);
 
-const fbLoginCallback = async (
-  response: any
-) => {
+const signupCodeRef = useRef<string | null>(null);
+const signupFinishingRef = useRef(false);
+
+const completeSignupIfReady = async () => {
+  const code = signupCodeRef.current;
+
+  const {
+    whatsappBusinessAccountId: wabaId,
+    phoneNumberId: phoneId,
+  } = signupIdsRef.current;
+
   if (
-    !response?.authResponse?.code
+    !code ||
+    !wabaId ||
+    !phoneId ||
+!connectSessionRef.current ||
+signupFinishingRef.current
   ) {
-    setLoading(false);
     return;
   }
 
-  if (!connectSession) {
-    setSessionError(
-      "Sessione di collegamento non disponibile."
-    );
-
-    setLoading(false);
-    return;
-  }
-
-  const code =
-    response.authResponse.code;
+  signupFinishingRef.current = true;
 
   try {
-    const backendResponse =
-      await fetch(
-        "https://api.maconclub.com/api/whatsapp/embedded-signup/bridge/complete",
-        {
-          method: "POST",
+    const backendResponse = await fetch(
+      "https://api.maconclub.com/api/whatsapp/embedded-signup/bridge/complete",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          connectToken: connectSessionRef.current,
+          code,
+          whatsappBusinessAccountId: wabaId,
+          phoneNumberId: phoneId,
+        }),
+      }
+    );
 
-          headers: {
-            "Content-Type":
-              "application/json",
-          },
+    const data = await backendResponse.json();
 
-          body: JSON.stringify({
-            connectToken:
-              connectSession,
-
-            code,
-
-            whatsappBusinessAccountId:
-  signupIdsRef.current.whatsappBusinessAccountId,
-
-phoneNumberId:
-  signupIdsRef.current.phoneNumberId,
-          }),
-        }
-      );
-
-    const data =
-      await backendResponse.json();
-
-    if (
-      !backendResponse.ok ||
-      data?.success !== true
-    ) {
+    if (!backendResponse.ok || data?.success !== true) {
       throw new Error(
-        data?.error ||
-          "Collegamento WhatsApp non completato"
+        data?.error || "Collegamento WhatsApp non completato"
       );
     }
 
-    /*
-     * Per ora confermiamo soltanto
-     * che backend + sessione + code Meta
-     * sono arrivati correttamente.
-     *
-     * Il prossimo passaggio completerà
-     * lo scambio e la verifica degli
-     * asset direttamente con Meta.
-     */
-
     setSessionError(null);
-  } catch (error: any) {
-    setSessionError(
-      error?.message ||
-        "Errore durante il collegamento WhatsApp Business."
-    );
-  } finally {
     setLoading(false);
-  }
+    setConnectionCompleted(true);
+  } catch (error: any) {
+  signupFinishingRef.current = false;
+
+  setSessionError(
+    error?.message ||
+      "Errore durante il collegamento WhatsApp Business."
+  );
+
+  setLoading(false);
+}
 };
+
+const fbLoginCallback = (
+  response: any
+) => {
+  if (!response?.authResponse?.code) {
+    setLoading(false);
+    return;
+  }
+
+  signupCodeRef.current = response.authResponse.code;
+  void completeSignupIfReady();
+};
+  
 
 const launchWhatsAppSignup = () => {
   const win = window as any;
@@ -308,9 +293,19 @@ const launchWhatsAppSignup = () => {
     return;
   }
 
-  setLoading(true);
+  setSessionError(null);
+setLoading(true);
 
-  win.FB.login(
+signupCodeRef.current = null;
+
+signupIdsRef.current = {
+  whatsappBusinessAccountId: null,
+  phoneNumberId: null,
+};
+
+signupFinishingRef.current = false;
+
+win.FB.login(
     fbLoginCallback,
     {
       config_id:
@@ -381,6 +376,58 @@ if (
   {sessionError ||
     "Avvia il collegamento WhatsApp direttamente dall'app MaconClub."}
 </p>
+      </div>
+    </main>
+  );
+}
+
+if (connectionCompleted) {
+  return (
+    <main
+      style={{
+        minHeight: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: 24,
+        backgroundColor: "#f8fafc",
+      }}
+    >
+      <div
+        style={{
+          width: "100%",
+          maxWidth: 520,
+          backgroundColor: "#ffffff",
+          border: "1px solid #bbf7d0",
+          borderRadius: 20,
+          padding: 28,
+          textAlign: "center",
+        }}
+      >
+        <h1
+          style={{
+            margin: 0,
+            fontSize: 26,
+            color: "#15803d",
+          }}
+        >
+          WhatsApp collegato!
+        </h1>
+
+        <p
+          style={{
+            marginTop: 16,
+            marginBottom: 0,
+            color: "#475569",
+            lineHeight: 1.6,
+          }}
+        >
+          Il collegamento WhatsApp Business
+          con MaconClub è stato completato
+          correttamente.
+          Puoi chiudere questa pagina e
+          tornare all&apos;app MaconClub.
+        </p>
       </div>
     </main>
   );
@@ -477,6 +524,20 @@ if (
     ? "Caricamento Meta..."
     : "Collega WhatsApp Business"}
         </button>
+        {sessionError && (
+  <p
+    role="alert"
+    style={{
+      marginTop: 16,
+      marginBottom: 0,
+      color: "#b91c1c",
+      fontSize: 14,
+      lineHeight: 1.6,
+    }}
+  >
+    {sessionError}
+  </p>
+)}
       </div>
             </main>
   </>
