@@ -147,24 +147,23 @@ useEffect(() => {
     }
 
     if (
-      data?.event === "FINISH"
-    ) {
-      const wabaId =
-        data?.data
-          ?.waba_id ?? null;
+  data?.event === "FINISH" ||
+  data?.event ===
+    "FINISH_WHATSAPP_BUSINESS_APP_ONBOARDING"
+) {
+  const wabaId =
+    data?.data?.waba_id ?? null;
 
-      const phoneId =
-        data?.data
-          ?.phone_number_id ?? null;
+  const phoneId =
+    data?.data?.phone_number_id ?? null;
 
-      signupIdsRef.current = {
-  whatsappBusinessAccountId: wabaId,
-  phoneNumberId: phoneId,
-};
+  signupIdsRef.current = {
+    whatsappBusinessAccountId: wabaId,
+    phoneNumberId: phoneId,
+  };
 
-void completeSignupIfReady();
-
-    }
+  void completeSignupIfReady();
+}
   };
 
   window.addEventListener(
@@ -219,14 +218,13 @@ const completeSignupIfReady = async () => {
   } = signupIdsRef.current;
 
   if (
-    !code ||
-    !wabaId ||
-    !phoneId ||
-!connectSessionRef.current ||
-signupFinishingRef.current
-  ) {
-    return;
-  }
+  !code ||
+  !wabaId ||
+  !connectSessionRef.current ||
+  signupFinishingRef.current
+) {
+  return;
+}
 
   signupFinishingRef.current = true;
 
@@ -318,10 +316,11 @@ win.FB.login(
         true,
 
       extras: {
-  version: "v4",
+  setup: {},
   featureType:
     "whatsapp_business_app_onboarding",
-      },
+  sessionInfoVersion: "3",
+},
     }
   );
 };
