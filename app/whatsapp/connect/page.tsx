@@ -1,7 +1,10 @@
+//app/whatsapp/connect/page.tsx
+
 "use client";
 
 import {
   useEffect,
+  useRef,
   useState,
 } from "react";
 import Script from "next/script";
@@ -46,6 +49,14 @@ const [
   phoneNumberId,
   setPhoneNumberId,
 ] = useState<string | null>(null);
+
+const signupIdsRef = useRef<{
+  whatsappBusinessAccountId: string | null;
+  phoneNumberId: string | null;
+}>({
+  whatsappBusinessAccountId: null,
+  phoneNumberId: null,
+});
 
 useEffect(() => {
   const validateSession =
@@ -149,13 +160,18 @@ useEffect(() => {
         data?.data
           ?.phone_number_id ?? null;
 
-      setWhatsAppBusinessAccountId(
-        wabaId
-      );
+      signupIdsRef.current = {
+  whatsappBusinessAccountId: wabaId,
+  phoneNumberId: phoneId,
+};
 
-      setPhoneNumberId(
-        phoneId
-      );
+setWhatsAppBusinessAccountId(
+  wabaId
+);
+
+setPhoneNumberId(
+  phoneId
+);
     }
   };
 
@@ -239,9 +255,11 @@ const fbLoginCallback = async (
 
             code,
 
-            whatsappBusinessAccountId,
+            whatsappBusinessAccountId:
+  signupIdsRef.current.whatsappBusinessAccountId,
 
-            phoneNumberId,
+phoneNumberId:
+  signupIdsRef.current.phoneNumberId,
           }),
         }
       );
