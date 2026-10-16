@@ -217,19 +217,30 @@ const completeSignupIfReady = async () => {
     phoneNumberId: phoneId,
   } = signupIdsRef.current;
 
-  if (
-  !code ||
-  !wabaId ||
-  !connectSessionRef.current ||
-  signupFinishingRef.current
-) {
+  if (signupFinishingRef.current) {
+  return;
+}
+
+if (!code || !wabaId || !connectSessionRef.current) {
+  if (code && !wabaId) {
+    setSessionError(
+      "Meta ha restituito il codice di autorizzazione, ma manca l'identificativo dell'account WhatsApp Business."
+    );
+    setLoading(false);
+  }
+
   return;
 }
 
   signupFinishingRef.current = true;
 
-  try {
-    const backendResponse = await fetch(
+// Abbiamo ricevuto tutti i dati necessari.
+// Rimuoviamo eventuali errori temporanei.
+setSessionError(null);
+setLoading(true);
+
+try {
+  const backendResponse = await fetch(
       "https://api.maconclub.com/api/whatsapp/embedded-signup/bridge/complete",
       {
         method: "POST",
