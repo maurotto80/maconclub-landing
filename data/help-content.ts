@@ -158,7 +158,7 @@ export const helpArticles: HelpArticle[] = [
     ],
 
     // Da completare dopo la pubblicazione su YouTube
-    videoUrl: undefined,
+    videoUrl: "https://www.youtube.com/embed/VdXItCqmn-w",
 
     thumbnailUrl:
       "/help/thumbnails/rappresentante-legale.png",
