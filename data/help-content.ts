@@ -284,4 +284,34 @@ export const helpArticles: HelpArticle[] = [
   thumbnailUrl:
     "/help/thumbnails/assegnazione-allenatori.png",
 },
+// =====================================================
+// 👦 GRUPPI - ASSEGNAZIONE ATLETI
+// =====================================================
+{
+  category: "gruppi",
+  slug: "assegnazione-atleti",
+
+  title: "Come assegnare gli Atleti a un Gruppo",
+
+  description:
+    "Scopri come assegnare gli atleti già presenti " +
+    "in MaconClub a un gruppo sportivo della tua ASD, " +
+    "organizzando correttamente le attività sportive.",
+
+  keywords: [
+    "assegnazione atleti",
+    "atleti gruppo",
+    "gestione gruppi",
+    "associa atleta",
+    "assegnare atleti",
+    "amministratore ASD",
+    "organizzazione atleti",
+  ],
+
+  videoUrl:
+    "https://www.youtube.com/embed/9zrsWfnantg",
+
+  thumbnailUrl:
+    "/help/thumbnails/assegnazione-atleti.png",
+},
 ];
