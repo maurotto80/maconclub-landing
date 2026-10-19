@@ -254,4 +254,34 @@ export const helpArticles: HelpArticle[] = [
   thumbnailUrl:
     "/help/thumbnails/creazione-nuovo-gruppo.png",
 },
+// =====================================================
+// 👨‍🏫 GRUPPI - ASSEGNAZIONE ALLENATORI
+// =====================================================
+{
+  category: "gruppi",
+  slug: "assegnazione-allenatori",
+
+  title: "Come assegnare gli Allenatori a un Gruppo",
+
+  description:
+    "Scopri come assegnare uno o più allenatori " +
+    "a un gruppo sportivo della tua ASD attraverso " +
+    "la piattaforma MaconClub.",
+
+  keywords: [
+    "assegnazione allenatori",
+    "allenatori gruppo",
+    "gestione gruppi",
+    "associa allenatore",
+    "assegnare allenatori",
+    "amministratore ASD",
+    "staff tecnico",
+  ],
+
+  videoUrl:
+    "https://www.youtube.com/embed/OVorPvZKupA",
+
+  thumbnailUrl:
+    "/help/thumbnails/assegnazione-allenatori.png",
+},
 ];
