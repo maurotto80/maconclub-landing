@@ -193,4 +193,35 @@ export const helpArticles: HelpArticle[] = [
     thumbnailUrl:
       "/help/thumbnails/compilazione-iscrizione-online.png",
   },
+  // =====================================================
+// 📝 ISCRIZIONE ONLINE - APPROVAZIONE ADMIN
+// =====================================================
+{
+  category: "iscrizione-online",
+  slug: "approvazione-iscrizione-online",
+
+  title: "Come approvare un'Iscrizione Online",
+
+  description:
+    "Scopri come visualizzare, verificare e approvare " +
+    "le richieste di iscrizione online ricevute dalla tua " +
+    "ASD attraverso il pannello amministrativo MaconClub.",
+
+  keywords: [
+    "approvazione iscrizione",
+    "iscrizione online",
+    "admin",
+    "amministratore ASD",
+    "iscrizioni in attesa",
+    "verifica iscrizione",
+    "approva atleta",
+    "gestione iscrizioni",
+  ],
+
+  videoUrl:
+    "https://www.youtube.com/embed/kFgB8k8mLPI",
+
+  thumbnailUrl:
+    "/help/thumbnails/approvazione-iscrizione-online.png",
+},
 ];
