@@ -224,4 +224,34 @@ export const helpArticles: HelpArticle[] = [
   thumbnailUrl:
     "/help/thumbnails/approvazione-iscrizione-online.png",
 },
+// =====================================================
+// 👥 GRUPPI - CREAZIONE NUOVO GRUPPO
+// =====================================================
+{
+  category: "gruppi",
+  slug: "creazione-nuovo-gruppo",
+
+  title: "Come creare un nuovo Gruppo",
+
+  description:
+    "Scopri come creare un nuovo gruppo sportivo " +
+    "all'interno di MaconClub, compilare le informazioni " +
+    "richieste e organizzare le attività della tua ASD.",
+
+  keywords: [
+    "gruppi",
+    "nuovo gruppo",
+    "creazione gruppo",
+    "gestione gruppi",
+    "amministratore ASD",
+    "organizzazione atleti",
+    "gruppi sportivi",
+  ],
+
+  videoUrl:
+    "https://www.youtube.com/embed/VA0wQOEf8qc",
+
+  thumbnailUrl:
+    "/help/thumbnails/creazione-nuovo-gruppo.png",
+},
 ];
