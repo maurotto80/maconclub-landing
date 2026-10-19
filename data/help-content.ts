@@ -129,7 +129,38 @@ export const helpArticles: HelpArticle[] = [
     ],
 
     // Inseriremo qui il link del video
-    videoUrl: "https://www.youtube.com/embed/X8Jnrejaswo",
+        videoUrl: "https://www.youtube.com/embed/X8Jnrejaswo",
     thumbnailUrl: "/help/thumbnails/creazione-manuale-atleta.png",
+  },
+
+  // =====================================================
+  // ⚙️ ACCOUNT - RAPPRESENTANTE LEGALE
+  // =====================================================
+  {
+    category: "account",
+    slug: "rappresentante-legale",
+
+    title: "Come compilare i dati del Rappresentante Legale",
+
+    description:
+      "Scopri come inserire correttamente i dati del " +
+      "Rappresentante Legale della tua ASD, necessari per " +
+      "la successiva firma del contratto MaconClub.",
+
+    keywords: [
+      "rappresentante legale",
+      "dati rappresentante legale",
+      "contratto MaconClub",
+      "firma contratto",
+      "contratto SaaS",
+      "dati societari",
+      "account",
+    ],
+
+    // Da completare dopo la pubblicazione su YouTube
+    videoUrl: undefined,
+
+    thumbnailUrl:
+      "/help/thumbnails/rappresentante-legale.png",
   },
 ];
