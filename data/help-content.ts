@@ -163,4 +163,34 @@ export const helpArticles: HelpArticle[] = [
     thumbnailUrl:
       "/help/thumbnails/rappresentante-legale.png",
   },
+    // =====================================================
+  // 📝 ISCRIZIONE ONLINE - COMPILAZIONE MODULO
+  // =====================================================
+  {
+    category: "iscrizione-online",
+    slug: "compilazione-iscrizione-online",
+
+    title: "Come compilare l'Iscrizione Online",
+
+    description:
+      "Scopri come compilare il modulo di iscrizione online " +
+      "di MaconClub e inviare correttamente la richiesta " +
+      "alla tua associazione sportiva.",
+
+    keywords: [
+      "iscrizione online",
+      "compilazione iscrizione",
+      "modulo iscrizione",
+      "iscrizione atleta",
+      "genitore",
+      "tutore",
+      "richiesta iscrizione",
+      "registrazione atleta",
+    ],
+
+    videoUrl: "https://www.youtube.com/embed/OBpYNe7mP80",
+
+    thumbnailUrl:
+      "/help/thumbnails/compilazione-iscrizione-online.png",
+  },
 ];
