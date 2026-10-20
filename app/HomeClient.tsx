@@ -104,10 +104,10 @@ export default function HomeClient() {
             </button>
 
             <a
-              href="https://wa.me/393351004423"
+              href="https://wa.me/393273213234"
               className="w-full sm:w-auto px-6 py-3 rounded-xl bg-white text-black font-semibold hover:bg-gray-200 text-center"
             >
-              WhatsApp: +39 335 100 4423
+              WhatsApp: +39 327 321 3234
             </a>
 
           </div>
@@ -284,7 +284,7 @@ export default function HomeClient() {
           </a>
 
           <a
-            href="https://wa.me/393351004423"
+            href="https://wa.me/393273213234"
             className="w-full sm:w-auto px-6 py-3 rounded-xl bg-green-600 hover:bg-green-700 text-white font-semibold"
           >
             WhatsApp Demo
@@ -374,31 +374,62 @@ export default function HomeClient() {
 </section>
 
       {/* FOOTER */}
-      <footer className="bg-gray-900 text-white py-10 text-center">
-  <p className="font-semibold">MaconClub © {new Date().getFullYear()}</p>
+<footer className="bg-gray-900 text-white py-10 px-6 text-center">
 
-  <p className="mt-2">
-    Contatti:{" "}
-    <a className="underline" href="mailto:info@maconclub.com">
-      info@maconclub.com
-    </a>
-  </p>
+  <div className="max-w-6xl mx-auto">
 
-  <div className="mt-2 flex justify-center gap-4">
-  <a
-    href="/privacy"
-    className="underline text-gray-300 hover:text-white"
-  >
-    Privacy Policy
-  </a>
+    {/* COPYRIGHT */}
+    <p className="font-semibold text-lg">
+      MaconClub © {new Date().getFullYear()}
+    </p>
 
-  <a
-    href="/terms"
-    className="underline text-gray-300 hover:text-white"
-  >
-    Termini e Condizioni
-  </a>
-</div>
+    {/* RAGIONE SOCIALE */}
+    <p className="mt-3 text-sm text-gray-300">
+      Mauro Imparato | P. IVA 10846121217
+    </p>
+
+    {/* CONTATTI */}
+    <div className="mt-5 flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-6 text-sm">
+
+      <a
+        href="mailto:info@maconclub.com"
+        className="hover:text-blue-400 transition"
+      >
+        ✉️ info@maconclub.com
+      </a>
+
+      <a
+        href="https://wa.me/393273213234"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-green-400 transition"
+      >
+        📱 +39 327 321 3234
+      </a>
+
+    </div>
+
+    {/* LINK LEGALI */}
+    <div className="mt-6 flex flex-wrap justify-center gap-5 text-sm">
+
+      <a
+        href="/privacy"
+        className="text-gray-300 underline hover:text-white"
+      >
+        Privacy Policy
+      </a>
+
+      <a
+        href="/terms"
+        className="text-gray-300 underline hover:text-white"
+      >
+        Termini e Condizioni
+      </a>
+
+    </div>
+
+  </div>
+
 </footer>
 
       <DemoModal

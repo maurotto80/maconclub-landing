@@ -5,6 +5,10 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import Script from "next/script";
+import { FaWhatsapp } from "react-icons/fa";
+
+
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -123,8 +127,49 @@ export default function RootLayout({
   })}
 </Script>
 
-        <Navbar />
+                <Navbar />
         {children}
+
+        {/* ==========================================
+            WHATSAPP BUSINESS — PULSANTE FLOTTANTE
+        ========================================== */}
+        <a
+          href="https://wa.me/393273213234?text=Ciao%2C%20vorrei%20ricevere%20informazioni%20su%20MaconClub"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Contatta MaconClub su WhatsApp Business"
+          title="Scrivici su WhatsApp"
+          className="
+            fixed
+            bottom-5
+            right-5
+            sm:bottom-7
+            sm:right-7
+            z-50
+            flex
+            h-14
+            w-14
+            sm:h-16
+            sm:w-16
+            items-center
+            justify-center
+            rounded-full
+            bg-[#25D366]
+            text-white
+            shadow-xl
+            transition-all
+            duration-300
+            hover:bg-[#1ebe5d]
+            hover:scale-110
+            focus-visible:outline
+            focus-visible:outline-2
+            focus-visible:outline-offset-4
+            focus-visible:outline-green-600
+          "
+        >
+          <FaWhatsapp className="text-3xl sm:text-4xl" />
+        </a>
+
       </body>
     </html>
   );
