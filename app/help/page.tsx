@@ -66,7 +66,7 @@ export default function HelpPage() {
         </div>
       </section>
 
-      {/* CATEGORIE */}
+      {/*CATEGORIE*/}
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-6">
 
