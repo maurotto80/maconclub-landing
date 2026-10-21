@@ -2,25 +2,39 @@
 
 import Link from "next/link";
 
-const categories = [
-  { emoji: "🏠", title: "Dashboard", slug: "dashboard" },
-  { emoji: "📝", title: "Iscrizione Online", slug: "iscrizione-online" },
-  { emoji: "📣", title: "Convocazioni", slug: "convocazioni" },
-  { emoji: "📢", title: "Bacheca", slug: "bacheca" },
-  { emoji: "📸", title: "Galleria Foto", slug: "galleria-foto" },
-  { emoji: "👦", title: "Atleti", slug: "atleti" },
-  { emoji: "👨‍🏫", title: "Allenatori", slug: "allenatori" },
-  { emoji: "👥", title: "Gruppi", slug: "gruppi" },
-  { emoji: "👨‍👩‍👧", title: "Genitori", slug: "genitori" },
-  { emoji: "📅", title: "Calendario Allenamenti", slug: "calendario-allenamenti" },
-  { emoji: "✅", title: "Presenze Allenamenti", slug: "presenze-allenamenti" },
-  { emoji: "📚", title: "Sessioni Allenamenti", slug: "sessioni-allenamenti" },
-  { emoji: "💳", title: "Gestione Quote", slug: "gestione-quote" },
-  { emoji: "📒", title: "Contabilità", slug: "contabilita" },
-  { emoji: "📋", title: "Soci", slug: "soci" },
-  { emoji: "👷", title: "Collaboratori", slug: "collaboratori" },
-  { emoji: "⚙️", title: "Account", slug: "account" },
-];
+import {
+  helpCategories,
+  helpArticles,
+} from "@/data/help-content";
+
+
+// =====================================================
+// 🎥 CONTATORE VIDEO PER CATEGORIA
+// =====================================================
+
+const videoCountByCategory = helpArticles.reduce<
+  Record<string, number>
+>((counts, article) => {
+
+  if (article.videoUrl) {
+    counts[article.category] =
+      (counts[article.category] || 0) + 1;
+  }
+
+  return counts;
+
+}, {});
+
+// =====================================================
+// 📚 CATEGORIE CON VIDEO PRIMA DELLE ALTRE
+// =====================================================
+
+const sortedCategories = [...helpCategories].sort((a, b) => {
+  const countA = videoCountByCategory[a.slug] || 0;
+  const countB = videoCountByCategory[b.slug] || 0;
+
+  return Number(countB > 0) - Number(countA > 0);
+});
 
 export default function HelpPage() {
   return (
@@ -58,25 +72,58 @@ export default function HelpPage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-            {categories.map((item) => (
-              <Link
-                key={item.slug}
-                href={`/help/${item.slug}`}
-                className="bg-white rounded-2xl shadow hover:shadow-lg transition p-6"
-              >
-                <div className="text-4xl">
-                  {item.emoji}
-                </div>
+            {sortedCategories.map((item) => {
 
-                <h2 className="mt-4 text-xl font-bold text-gray-900">
-                  {item.title}
-                </h2>
+  const videoCount =
+    videoCountByCategory[item.slug] || 0;
 
-                <p className="mt-2 text-gray-500">
-                  Guide e tutorial dedicati.
-                </p>
-              </Link>
-            ))}
+  return (
+    <Link
+      key={item.slug}
+      href={`/help/${item.slug}`}
+      className="bg-white rounded-2xl shadow
+                 hover:shadow-lg transition p-6"
+    >
+
+      <div className="flex items-center justify-between gap-3">
+
+        <div className="text-4xl">
+          {item.emoji}
+        </div>
+
+        {videoCount > 0 && (
+          <span
+            className="bg-blue-100 text-blue-700
+                       text-xs font-bold px-3 py-1
+                       rounded-full whitespace-nowrap"
+          >
+            🎥 {videoCount} {videoCount === 1 ? "video" : "video"}
+          </span>
+        )}
+
+      </div>
+
+      <h2 className="mt-4 text-xl font-bold text-gray-900">
+        {item.title}
+      </h2>
+
+      {videoCount > 0 ? (
+        <p className="mt-2 text-gray-600">
+          {videoCount}{" "}
+          {videoCount === 1
+            ? "tutorial disponibile"
+            : "tutorial disponibili"}
+        </p>
+      ) : (
+        <p className="mt-2 text-gray-400">
+          Tutorial in preparazione
+        </p>
+      )}
+
+    </Link>
+  );
+
+})}
 
           </div>
 
