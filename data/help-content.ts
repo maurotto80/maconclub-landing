@@ -344,4 +344,35 @@ export const helpArticles: HelpArticle[] = [
   thumbnailUrl:
     "/help/thumbnails/modifica-gruppo.png",
 },
+// =====================================================
+// ✅ PRESENZE ALLENAMENTI - REPORT MENSILE
+// =====================================================
+{
+  category: "presenze-allenamenti",
+  slug: "report-presenze",
+
+  title: "Report Presenze Mensile – PDF e Condivisione",
+
+  description:
+    "Scopri come generare il report mensile delle presenze " +
+    "di un gruppo sportivo, visualizzarlo direttamente " +
+    "in MaconClub, esportarlo in PDF e condividerlo.",
+
+  keywords: [
+    "report presenze",
+    "presenze allenamenti",
+    "report mensile",
+    "presenze atleti",
+    "gruppo sportivo",
+    "esportazione PDF",
+    "condivisione report",
+    "amministratore ASD",
+  ],
+
+  videoUrl:
+    "https://www.youtube.com/embed/aBC1egNYHUQ",
+
+  thumbnailUrl:
+    "/help/thumbnails/report-presenze.png",
+},
 ];
