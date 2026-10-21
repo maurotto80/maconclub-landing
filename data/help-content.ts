@@ -314,4 +314,34 @@ export const helpArticles: HelpArticle[] = [
   thumbnailUrl:
     "/help/thumbnails/assegnazione-atleti.png",
 },
+// =====================================================
+// 👥 GRUPPI - MODIFICA GRUPPO
+// =====================================================
+{
+  category: "gruppi",
+  slug: "modifica-gruppo",
+
+  title: "Come modificare un Gruppo",
+
+  description:
+    "Scopri come modificare un gruppo sportivo già " +
+    "esistente in MaconClub, aggiornando le informazioni " +
+    "e salvando correttamente le modifiche.",
+
+  keywords: [
+    "modifica gruppo",
+    "gruppi",
+    "gestione gruppi",
+    "aggiorna gruppo",
+    "modificare gruppo",
+    "amministratore ASD",
+    "organizzazione gruppi",
+  ],
+
+  videoUrl:
+    "https://www.youtube.com/embed/aahPBlQP56M",
+
+  thumbnailUrl:
+    "/help/thumbnails/modifica-gruppo.png",
+},
 ];
