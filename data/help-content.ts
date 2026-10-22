@@ -375,4 +375,68 @@ export const helpArticles: HelpArticle[] = [
   thumbnailUrl:
     "/help/thumbnails/report-presenze.png",
 },
+// =====================================================
+// ⚙️ ACCOUNT - LA MIA SOCIETÀ
+// =====================================================
+{
+  category: "account",
+  slug: "configurazione-societa",
+
+  title: "La Mia Società – Dati Anagrafici, Logo e Firma",
+
+  description:
+    "Scopri come compilare i dati anagrafici della tua " +
+    "società, caricare il logo e inserire la firma da " +
+    "utilizzare nei documenti generati da MaconClub.",
+
+  keywords: [
+    "la mia società",
+    "configurazione società",
+    "dati anagrafici società",
+    "logo società",
+    "firma documenti",
+    "account",
+    "maconclub",
+    "amministratore ASD",
+  ],
+
+  videoUrl:
+    "https://www.youtube.com/embed/rhCWBAZNd5s",
+
+  thumbnailUrl:
+    "/help/thumbnails/configurazione-societa.png",
+},
+// =====================================================
+// ⚙️ ACCOUNT - TESTI ISCRIZIONE
+// =====================================================
+{
+  category: "account",
+  slug: "testi-iscrizione",
+
+  title: "Come configurare i Testi Iscrizione",
+
+  description:
+    "Scopri come configurare i tre box della sezione " +
+    "Account → Testi Iscrizione: Testo Libero, Informativa " +
+    "Privacy e Termini e Condizioni, visualizzati dai " +
+    "genitori durante l'iscrizione online.",
+
+  keywords: [
+    "testi iscrizione",
+    "modulo iscrizione",
+    "testo libero",
+    "informativa privacy",
+    "termini e condizioni",
+    "regolamento ASD",
+    "documenti iscrizione",
+    "iscrizione online",
+    "configurazione account",
+  ],
+
+  videoUrl:
+    "https://www.youtube.com/embed/AuScqAQJp50",
+
+  thumbnailUrl:
+    "/help/thumbnails/testi-iscrizione.png",
+},
 ];
