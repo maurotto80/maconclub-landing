@@ -500,4 +500,35 @@ export const helpArticles: HelpArticle[] = [
   thumbnailUrl:
     "/help/thumbnails/creazione-nuova-tariffa.png",
 },
+// =====================================================
+// 💳 GESTIONE QUOTE - PAGAMENTO TOTALE RATA
+// =====================================================
+{
+  category: "gestione-quote",
+  slug: "pagamento-totale-rata",
+
+  title: "Come registrare il Pagamento Totale di una Rata",
+
+  description:
+    "Scopri come registrare il pagamento completo " +
+    "di una rata dell'atleta attraverso MaconClub, " +
+    "aggiornando correttamente la sua situazione economica.",
+
+  keywords: [
+    "pagamento totale",
+    "pagamento rata",
+    "registrazione pagamento",
+    "gestione quote",
+    "pagamenti atleti",
+    "rata saldata",
+    "situazione economica",
+    "amministratore ASD",
+  ],
+
+  videoUrl:
+    "https://www.youtube.com/embed/VunoOGU6SNY",
+
+  thumbnailUrl:
+    "/help/thumbnails/pagamento-totale-rata.png",
+},
 ];
