@@ -439,4 +439,34 @@ export const helpArticles: HelpArticle[] = [
   thumbnailUrl:
     "/help/thumbnails/testi-iscrizione.png",
 },
+// =====================================================
+// 💳 GESTIONE QUOTE - ASSEGNAZIONE TARIFFA ATLETA
+// =====================================================
+{
+  category: "gestione-quote",
+  slug: "assegnazione-tariffa-atleta",
+
+  title: "Come assegnare una Tariffa a un Atleta",
+
+  description:
+    "Scopri come assegnare una tariffa a un atleta " +
+    "della tua ASD attraverso MaconClub, gestendo " +
+    "le quote economiche e verificando l'assegnazione.",
+
+  keywords: [
+    "assegnazione tariffa",
+    "tariffa atleta",
+    "gestione quote",
+    "tariffe",
+    "quote sportive",
+    "situazione economica atleta",
+    "amministratore ASD",
+  ],
+
+  videoUrl:
+    "https://www.youtube.com/embed/wyuYvYfFsLQ",
+
+  thumbnailUrl:
+    "/help/thumbnails/assegnazione-tariffa-atleta.png",
+},
 ];
