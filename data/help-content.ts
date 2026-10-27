@@ -469,4 +469,35 @@ export const helpArticles: HelpArticle[] = [
   thumbnailUrl:
     "/help/thumbnails/assegnazione-tariffa-atleta.png",
 },
+// =====================================================
+// 💳 GESTIONE QUOTE - CREAZIONE NUOVA TARIFFA
+// =====================================================
+{
+  category: "gestione-quote",
+  slug: "creazione-nuova-tariffa",
+
+  title: "Come creare una Nuova Tariffa",
+
+  description:
+    "Scopri come creare e configurare una nuova tariffa " +
+    "in MaconClub, inserendo le diverse voci economiche, " +
+    "gli importi e le eventuali rate previste dalla tua ASD.",
+
+  keywords: [
+    "creazione tariffa",
+    "nuova tariffa",
+    "gestione quote",
+    "tariffe sportive",
+    "voci tariffa",
+    "rate",
+    "quote mensili",
+    "amministratore ASD",
+  ],
+
+  videoUrl:
+    "https://www.youtube.com/embed/vzvAY6BJaNA",
+
+  thumbnailUrl:
+    "/help/thumbnails/creazione-nuova-tariffa.png",
+},
 ];
