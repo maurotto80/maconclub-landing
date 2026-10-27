@@ -531,4 +531,65 @@ export const helpArticles: HelpArticle[] = [
   thumbnailUrl:
     "/help/thumbnails/pagamento-totale-rata.png",
 },
+// =====================================================
+// 🧾 GESTIONE QUOTE - RICEVUTA DA PAGAMENTO REGISTRATO
+// =====================================================
+{
+  category: "gestione-quote",
+  slug: "emissione-ricevuta-da-pagamento",
+
+  title: "Come emettere una Ricevuta da un Pagamento Registrato",
+
+  description:
+    "Scopri come emettere una ricevuta partendo da un " +
+    "pagamento già registrato in MaconClub, verificare " +
+    "i dati e consultare il documento generato.",
+
+  keywords: [
+    "emissione ricevuta",
+    "ricevuta da pagamento",
+    "pagamento registrato",
+    "gestione quote",
+    "ricevute",
+    "documento pagamento",
+    "amministratore ASD",
+  ],
+
+  videoUrl:
+    "https://www.youtube.com/embed/hZ-Bu4YPKnY",
+
+  thumbnailUrl:
+    "/help/thumbnails/ricevuta-da-pagamento.png",
+},
+// =====================================================
+// 🧾 GESTIONE QUOTE - EMISSIONE RICEVUTA MANUALE
+// =====================================================
+{
+  category: "gestione-quote",
+  slug: "emissione-ricevuta-manuale",
+
+  title: "Come emettere una Ricevuta Manuale",
+
+  description:
+    "Scopri come emettere manualmente una ricevuta " +
+    "direttamente dalla sezione Gestione Quote → Ricevute Emesse " +
+    "di MaconClub, compilando i dati richiesti e generando " +
+    "il documento.",
+
+  keywords: [
+    "ricevuta manuale",
+    "emissione ricevuta",
+    "ricevute emesse",
+    "creazione ricevuta",
+    "gestione quote",
+    "ricevute atleti",
+    "amministratore ASD",
+  ],
+
+  videoUrl:
+    "https://www.youtube.com/embed/122VbxewpVY",
+
+  thumbnailUrl:
+    "/help/thumbnails/ricevuta-manuale.png",
+},
 ];
